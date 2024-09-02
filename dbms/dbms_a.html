@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Database Management System?</title>
+    <link rel="stylesheet" href="../style/style_a.css">
+    <link rel="stylesheet" href="../style/card.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <div id="header_file"></div>
+
+    <!-- Main contain -->
+    <main>
+        <div class="px-5 py-5">
+            <div class="container" id="start">
+                <h2 class="h2-head">Database Management System</h2>
+            </div>
+            <div class="container">
+                <table>
+                    <th colspan="2">Table Of Content</th>
+                    <tr>
+                        <td>
+                            <ul class="ul-list">
+                                <li><a href="#a">Database/DBMS</a></li>
+                                <li><a href="#b">Characteristics of DBMS</a></li>
+                                <li><a href="#c">Database Architecture</a></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="ul-list">
+                                <li><a href="#d">Types Of Users</a></li>
+                                <li><a href="#e">Database Instance & Independence</a></li>
+                                <li><a href="#f">Database Administrator & its Functions</a></li>
+
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h5 class="h2-head" id="a">What is Databse?</h5>
+                <p class="p-para">Databse is a collection of related data and data is a collection of facts
+                    figures that can be processed to produce information. For example, consider the names,
+                    telephonenumbers
+                    , and addresses of the people you know. You may have recorded this data in an indexed address book
+                    or may have
+                    have stored it on a hard drive, using a personal computer and software such as Microsoft Access or
+                    Excel. This collection
+                    of related data with an implicit meaning is a database.</p>
+                <p class="p-para">Mostly data represents recordable facts. Data aids in producing information, which is
+                    based on facts, For example, if
+                    have data about marks obtained by all students, we can then conclude about toppers and average
+                    marks.
+                </p>
+                <h5 class="h2-head">What is Database Management System?</h5>
+                <p class="p-para">
+                    A Database Management System stores data in such a way that it becomes easier to retrieve,
+                    manipulate and produce information.
+                    The DBMS is a general-purpose-software-system that facilitates the process of defining,
+                    constructing, manipulating, and sharing databases among
+                    various users and applications. Defining a database involves specifying the data types, structures,
+                    and constraints of the data to be stored in the
+                    database.</p>
+            </div>
+            <div>
+                <h5 class="h2-head" id="b">Characteristics of DBMS:</h5>
+                <P class="p-para">
+                    Traditionally, data was organised in file formats. DBMS was a new concept then, and all research was
+                    done to make it overcome
+                    the deficiencies in traditional style of data management. A modern DBMS has the following
+                    characteristics -
+                </P>
+                <ul>
+                    <li><b>Read-World Entity:</b> A modern DBMS is more realistic and users real-world entities to
+                        design its architecture. It
+                        uses the behaviour and attributes too. For example, a school database may use students as an
+                        entity and their age as
+                        an attribute.</li>
+                    <li><b>Relational-bsed tables:</b> DBMS allows entities and relations among them to form tables. A
+                        user can understand the
+                        architecture of a databse just by looking at the table names.</li>
+                    <li><b>Isolation of data & application:</b> A database system is entirely different than its data. A
+                        Database is an active entity,
+                        whereas data is said to be passive , on which the database works and organise. DBMS also stores
+                        metadata, which is data about data,
+                        to ease its own process.</li>
+                    <li><b>Less Redundancy:</b> DBMS follows the rule of Normalization, which splits a relation when any
+                        of its attributes is having
+                        redundancy in values. Normalization is a mathematically a rich and scientific process that
+                        reduce data redundancy. </li>
+                    <li><b>Consistency:</b> Consistency is a state where every relation in a database remains
+                        consistent. There exist methods and
+                        techniques , which can detect attempt of leaving database in inconsistent state. A DBMS can
+                        provide greater consistency
+                        as compared to earlier forms of data storing applications like file-processing systems.</li>
+                    <li><b>Query Language:</b> DBMS is equipped with query language, which makes it more efficient to
+                        retrieve and manipulate data.
+                        A user can apply as many and as different filtering options as required to retrieve a set of
+                        data. Traditionally it was not
+                        possible where file-processing system was used.</li>
+                    <li><b>ACID Properties:</b> DBMS follows the concept of Atomicity, Consistency, Isolation &
+                        Durability (normally shortened as ACID).
+                        These concepts are applied on transactions, which manipulate data in a database</li>
+                    <li><b>Multiuser and Concurrent Access:</b> DBMS supports multi-user environment and allows them to
+                        access and manipulate data in parallel.
+                        Through there are restrictions on transactions when users attempt to handle the same data item,
+                        but users are always unaware of them.</li>
+                    <li><b>Multiple View: </b> DBMS offers multiple views for different users. A user who is in the
+                        sales department will have a different view of
+                        database than a person working in the Production department. This feature enables the users to
+                        have a concentrate view of database according
+                        to their requirements.</li>
+                    <li><b>Security:</b> DBMS offers methods to impose constraints while entering data into the database
+                        and retrieving the same at a later stage.</li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="h2-head" id="d">Types of Users:</h5>
+                <p class="p-para">
+                    A typical DBMS has users with different rights and permissions who use it for different purposes.
+                    Some users retrieve data and some back it up.
+                    The users of a DBMS can be broadly categorized as follows-</p>
+                <img src="./dbms-img/Typesofusers.jpg" class="img-fluid">
+                <b><u>Administrators:</u></b>
+                <p class="p-para"> Administrators maintain the DBMS and are responsible for administration the database.
+                    They are responsible to look after its usage and by whom
+                    it should be used. They create access profiles for users and apply limitations to maintain isolation
+                    and force security. Administrators also look after DBMS
+                    resources like system license, required tools, and other software and hardware related maintainence.
+                </p>
+                <b><u>Designers:</u></b>
+                <p class="p-para">Designers are the group of people who actually work on the designing part of the
+                    database. They keep a close watch on what data should be kept in what format. They identify and
+                    design the
+                    whole set of entities, relations, constraints, and views.</p>
+                <b><u>End Users:</u></b>
+                <p class="p-para">End users are those actually reap the benefits of having a DBMS. End Users can range
+                    from simple viewers who pay attention to the logs or market rates to sophisticated users such as
+                    business analysts.</p>
+            </div>
+            <div>
+                <h5 class="h2-head" id="c">Database Architecture</h5>
+                <p class="p-para">The design of a DBMS depends on its architecture. It can be centralized or
+                    hierarchical. The architecture of a DBMS can be seen as either single tier or multi-tier. An n-tier
+                    architecture divides the whole system
+                    into related but independent n modules, which can be independently modified, altered, changed, or
+                    replaced.</p>
+                <p class="p-para">In 1-tier architecture, the DBMS is the only entity where the user directly sits on
+                    the DBMS and uses it. Any changes done here will directly be done on the DBMS itself. It does not
+                    provide handy tools for end-users.
+                    Database designers and programmers normally prefer to use single-tier architecture.</p>
+                <p class="p-para">If the architecture of DBMS is 2-tier, then it must have an application through which
+                    the DBMS can be accessed. Programmers use 2-tier architecture where they access the DBMS by means of
+                    an application. Here the application
+                    tier is entirely independent of the database in terms of operation, design, and programming. </p>
+                <p class="p-para"><b>3-tier Architecture:</b> A 3-tier Architecture separates its tiers from each other
+                    based on the complexity of the users and how they use the data present in the database. It is the
+                    most widely used architecture to
+                    design a DBMS.</p>
+                <img source=""></img>
+                <ul>
+                    <li><b>Database(Data) Tier-</b> At this tier, the database resides along with its query processing
+                        languages. We also have the relations that define the data and their constraints at this level.
+                    </li>
+                    <li><b>Application(Middle) Tier-</b> At this tier reside the application serve and the programs that
+                        access the database. For a user, this application tier presents an abstracted view of the
+                        database. End-users are unaware of any existence of the database beyond the application.
+                        At the other end, the database tier is not aware of any other user beyond the application tier.
+                        Hence, the application layer sits in the middle and acts as a mediator between the end-user and
+                        the database.</li>
+                    <li><b>User(Presentation) Tier-</b> End-Users operate on this tier and they know nothing about any
+                        existence of the database beyond this layer. At this layer, multiple views of the database can
+                        be provided by the application.
+                        All views are generated by applications that reside in the application tier.</li>
+                </ul>
+                <h5 class="h2-head">Database Schema:</h5>
+                <p class="p-para"></p>A database schema is the skeleton structure that represents the logical view of
+                the entire database. It defines how the data is organized and how the relations among them are
+                associated. It formulates all the constraints that are to be applied
+                on the data.
+                <p class="p-para"> A database schema defines its entities and the relationship among them. It contains a
+                    descriptive detail of the database, which can be depicted by means of schema diagrams. It's the
+                    database designers who design the schema to help programmers understand the
+                    database and make it useful.</p>
+                <img src="">
+                <p class="p-para"> A database schema can be divided broadly into two categories-</p>
+                <ul>
+                    <li><b>Physical Database Schema:</b> This schema pertains to the actual storage of data and its form
+                        of storage like files, indices, etc. It defines how the data will be stored in a secondary
+                        storage. </li>
+                    <li><b>Logical Database Schema:</b> This schema defines all the logical constraints that need to be
+                        applied on the data stored. It defines tables, views, and integrity constraints.</li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="h2-head" id="e">Database Instance & Independence:</h5>
+                <p class="p-para"><b><u>Database Instance:</u></b></p>
+                <p class="p-para">It is important that we distinguish these two terms individually. Databbase schema is
+                    the skeleton of database. It is designed when the database doesn't exist at all. Once the database
+                    is operational, it is very difficult to
+                    make any changes to it. A database schema does not contain any data or information.</p>
+                <p class="p-para">A database instance is a state of operational database with data at any given time. It
+                    contains a snapshot of the database. Database instances tend to change with time. A DBMS ensures
+                    that its every instance (state) is in a valid state, by diligently following all
+                    the validations, constraints, and consitions that the database designers have imposed.</p>
+                <p class="p-para">If a database system is not multi-layered, then it becomes difficult to make any
+                    changes in the database system. Database systems are designed in multi-layered as we learnt earlier.
+                </p>
+                <p class="p-para"><b><u>Data Independence:</u></b></p>
+                <p class="p-para">A database system normally contains a lot of data in addition to users' data. For
+                    example, it stores data about data, known as metadata, to locate and retrieve data easily. It is
+                    rather difficult to modify and update
+                    a set of metadata once it is stored in the database. But as a DBMS expands, it needs to change over
+                    time to satisfy the requirements of the users. If the entire data is dependent, it would become a
+                    tedious and highly complex job.</p>
+                <img src="./dbms-img/dataindependence.jpg" height="400" width="700">
+                <p class="p-para">Metadata itself follows a layered architecture, so that when we change data one layer,
+                    it does not affect data at another level. The data is independent but mapped to each other.</p>
+                <p class="p-para"><b>Logical Data Independence:</b> Logical data is data about database, that is, it
+                    stores information about how data is managed inside. For example, a table(relation) stored in the
+                    database and all its constraints, applied on that relation.</p>
+                <p class="p-para">Logical data independence is a kind of mechanism, which liberalizes itself from actual
+                    data stored on the disk. If we do some changes on table format, it should not change the data
+                    residing on the disk.</p>
+                <p class="p-para"><b>Physical Data Independence:</b> </p>
+            </div>
+            <div class="btnn">
+                <div class="btn1">
+                    <a href="dbms_intro.html">Previous</a>
+                </div>
+                <div class="btn1">
+                    <a href="dbms_b.html">Next</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <div id="footer_file"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        $("#header_file").load("../heads.html");
+        $("#footer_file").load("../footer.html");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Mathematical Logic? in discrete mathematics.</title>
+    <link rel="stylesheet" href="../style/style_a.css">
+    <link rel="stylesheet" href="../style/card.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+    <!-- nav bar -->
+    <div id="header_file"></div>
+
+    <!-- Main contain -->
+   <main>
+      <div class="px-5 py-5"> 
+        <div class="container" id="start">
+            <h2 class="h2-head">Mathematical Logic</h2>
+        </div>
+        <div class="container">
+            <table>
+                <th colspan="2">Table Of Content</th>
+                <tr>
+                    <td>
+                        <ul class="ul-list">
+                            <li><a href="#a">Proposition(Statement)</a></li>
+                            <li><a href="#b">Compound Statements</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="ul-list">
+                            <li><a href="#c">Types of connectives</a></li>
+                            <li><a href="#d">Duality conditional and in-conditional statements</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+            <div>
+                <h5 class="h2-head" id="a">Proposition (Statement):</h5>
+                <p class="p-para">A Proposition or statement is a declarative sentence that 
+                    is either true or false, but not both. For example,"Three plus three equals six"
+                    and "Three plus three equals seven" are both statements the first because
+                    it is true and the second because it is false. Similarly "x+y>1" is not 
+                    a statement because for some values for x and y the sentence is true, whereas 
+                    for others it is false. For instance, if x=1 and y=2, the sentence is true, 
+                    if x=-3 and y=1, this is false. The truth or falsity of a statement is called 
+                    its truth value. </p>
+                <p class="p-para">For example,
+                       <br>1.) The sun rises in the west.
+                       <br>2.) 2+2 = 4.
+                       <br>3.) Do you speak Hindi?
+                       <br>The sentence 1, 2 & 3 are statements, the first is false and second 
+                       and third is true.
+                <p class="p-para"><b><u>Truth Tables:</u></b></p>
+                <p class="p-para">A truth table is a table that shows the truth value of 
+                    a compound proposition for all positions. For example, consider the
+                    conjuction of any two propositions p and q. The compound statement p ^ q
+                    is true when both p and q are true, otherwise it is false. These are possible
+                    cases.
+                    <br>a.) p is true and q is true.
+                    <br>b.) p is true and q is false.
+                    <br>c.) p is false and q is true.
+                    <br>d.) p is false and q is false.
+                    <br>Example-
+                    <table class="table table-bordered table-hover">
+                        <tr>
+                            <th>p</th>
+                            <th>q</th>
+                            <th>p ^ q</th>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td>T</td>
+                            <td>T</td>
+                        </tr>
+                        <tr>
+                            <td>T</th>
+                            <td>F</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td>T</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td>F</td>
+                            <td>F</td>
+                        </tr>
+                    </table>
+                </p>
+                </p>
+            </div>
+            <div>
+                <h5 class="h2-head" id="b">Compund Statements:</h5>
+                <P class="p-para">A proposition consisting of only a single propositional 
+                    variable or a single propositional constant is called an atomic (primary, primitive)
+                    proposition; that is they can not be further subdivided. A proposition obtained 
+                    from the combinations of two or more propositions by means of logical operators 
+                    or connectives of two or more propositions or by negating a single proposition 
+                    is referred to molecular or composite or compund proposition (statement).
+                    </P>
+                <p class="p-para"><b><u>Connectives:</u></b></p>
+                <p class="p-para">The words and phrases (or symbols) used to form compound 
+                    statements are called connectives. These are five basic connectives called 
+                    Negation, Conjuction, Disjunction, Conditional & Bi-Conditional. The following 
+                    symbols are used to represent connectives.
+                </p>
+                <table class="table table-bordered table-hover">
+                    <tr>
+                        <th>Symbol used</th>
+                        <th>Connective word</th>
+                        <th>Nature of the compound statement formed by the connective.</th>
+                        <th>Symbolic from</th>
+                        <th>Negation</th>
+                    </tr>
+                    <tr>
+                        <td>~,¬,N </td>
+                        <td>not</td>
+                        <td>Negation</td>
+                        <td>~p</td>
+                        <td>~(~p)=p</td>
+                    </tr>
+                    <tr>
+                        <td>^</td>
+                        <td>and</td>
+                        <td>Conjuction</td>
+                        <td>p^q</td>
+                        <td>(~p)∨(~q)</td>
+                    </tr>
+                    <tr>
+                        <td>∨</td>
+                        <td>or</td>
+                        <td>Disjunction</td>
+                        <td>p∨q</td>
+                        <td>(~p)^(~q)</td>
+                    </tr>
+                    <tr>
+                        <td>-></td>
+                        <td>if....then</td>
+                        <td>Conditional</td>
+                        <td>p->q</td>
+                        <td>p^(~q)</td>
+                    </tr>
+                    <tr>
+                        <td><-></td>
+                        <td>if and only if</td>
+                        <td>Bi-conditional</td>
+                        <td>p<->q</td>
+                        <td>[p^(~q)]∨[q^(~p)]</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h5 class="h2-head" id="c">Types of Connectives:</h5>
+                <img src="./discrete-img/Typesofconnectives.jpg" class="img-fluid">
+                <h5 class="h2-head">Negation:</h5>
+                <p class="p-para">If p is any proposition, the negation of p, denoted by
+                    ~p and read as not p, is a statement which is false when p is true and 
+                    true when p is false. Consider the statement- 
+                    <br>p: Paris is in France.
+                    <br>Then the negation of p is the statement 
+                    <br>~p: Paris is not in France.
+                    <br>Strictly speaking, not is not a connective, since it does not join 
+                    two statements and ~p is not really a compound statement. However, not is a 
+                    unary operation for the collection of statements, and ~p is a statement if p is 
+                    considered a statement. 
+                </p>
+                <h5 class="h2-head">Conjuction:</h5>
+                <p class="p-para">If p and q are two statements, then conjuction of p and q 
+                    is the compound statement denoted by p^p and reads as "p and q". The compound 
+                    statement p^q is true when both p and q are true, otherwise it is false. 
+                    Example-
+                    <br>p: Ram is healthy      
+                    <br>q: He has blue eyes
+                    <br>p^q: Ram is healthy and he has blue eyes.
+                </p>
+                <h5 class="h2-head">Disjunction:</h5>
+                <p class="p-para">If p and q are two statements, the disjunction of p and q is 
+                    the compound statement denoted by p∨q and reads as "p or q". The statement p∨q 
+                    is true if at least one of p or q is true. It is false when both p and q are 
+                    false.</p>
+                <p class="p-para">Example:
+                    <br> a.) 5 < 5 ∨ 5 < 6
+                    <br> b.) 5 * 4 = 21 ∨ 9 + 7 = 17
+                    <br>Solution:
+                    <br> a.) True, since one of its components viz. 5 < 6 is true.
+                    <br> b.) False, since both of its components are false.
+                </p>
+                <h5 class="h2-head">Conditional Statements:</h5>
+                <p class="p-para">A conditional statements is typically expressed in the form 
+                    "if p, then q", where p represents the hypothesis (or antecedent) and q 
+                    represents the conclusion (or consequent). It's often denoted as p->q. 
+                    The statement p->q means that if the hypothesis p is true, then the conclusion 
+                    q must also be true. However, if p is false, then the truth value of q doesn't 
+                    matter; the statement is still considered true.</p>
+                <p class="p-para">Example-
+                    <br>a.) If tomorrow is Sunday then today is Saturday.
+                    <br>b.) If it rains then I will carry an umbrella.
+                    <br>Here,
+                    <br>p: Tomorrow is Sunday 
+                    <br>q: Today is Saturday
+                    <br>The truth table of p->q is given below.
+                    <table class="table table-bordered table-hover">
+                        <tr>
+                            <th>p</th>
+                            <th>q</th>
+                            <th>p->q</th>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td>T</td>
+                            <td>T</td>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td>F</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td>T</td>
+                            <td>T</td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td>F</td>
+                            <td>T</td>
+                        </tr>
+                    </table>
+                </p>
+                <h5 class="h2-head">Bi-conditional Statements:</h5>
+                <p class="p-para">A Bi-conditional Statement is a logical statement that 
+                    asserts a relationship between two propositions, stating that they are true 
+                    or false simultaneously. It's often expressed as "If and only if" and denoted
+                    by the symbol <->.  
+                <p class="p-para">For example, let's say p represents the statement "It is raining,"
+                    and q reresents the statement "The ground is wet." Then, the bi-conditional 
+                    statements p<->q would mean "It is raining if and only if the ground is wet."</p>
+                <p class="p-para">The truth table for Bi-conditional Statement is-</p>
+                <table class="table table-bordered table-hover">
+                    <tr>
+                        <th>p</th>
+                        <th>q</th>
+                        <th>p<->q</th>
+                    </tr>
+                    <tr>
+                        <td>T</th>
+                        <td>T</td>
+                        <td>T</td>
+                    </tr>
+                    <tr>
+                        <td>T</td>
+                        <td>F</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>T</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>T</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h5 class="h2-head" id="d">Duality:</h5>
+                <p class="p-para">Given a boolean expression, the dual is formed by replacing AND 
+                    with OR, OR with AND, 0 with 1, and 1 with 0. Variables and complements are 
+                    left interchanged. This rule for forming the dual can be summerized as follows:
+                 <br>[f(X<sub>1</sub>, X<sub>2</sub>,....., X<sub>n</sub>, 0, 1, + , .)]<sup>D</sup> = f(X<sub>1</sub>, X<sub>2</sub>, ...... X<sub>n</sub>, 1, 0, . , +)
+                 <br>This important property of changing operations and identity elements in 
+                 Boolean algebra is known as <b>duality principle</b>. This ensures that if a 
+                    theorem is proved based on the axioms of the Boolean Algebra, then a dual 
+                    theorem obtained by interchanging + with . and 0 with 1 automatically holds. 
+                    Axioms and basic theorems are divided into two parts (a) and (b), one part 
+                    may be obtained by other by using duality principle.  
+                 
+                </p>
+                <h5 class="h2-head">Normal Forms:</h5>
+                <p class="p-para">By comparing truth tables, one determine whether two logical 
+                    expression P and Q are equivalent. But the process is very tedious when the 
+                    number of variables increases. A better method is to transform the expressions 
+                    P and Q to some standard forms of expressions P' and Q' such that a simple 
+                    comparision of P' and Q' shows whether P=Q, The standard forms are called 
+                    Normal Forms or Cononical Forms. These are two types of Normal form; 
+                    Disjunctive normal form and Conjuctive normal form.</p>
+                <p class="p-para"><b><u>Disjunctive Normal Form:</u></b></p>
+                <p class="p-para">In a logical expression, a product of the variables 
+                    and their negations is called an elementary product. For example, p^~q
+                    , ~p^~q, ~p^q are some elementary products in two variables. A sum of the variables 
+                    and their negations is called an elementary sum. For example, p∨q, p∨~q, 
+                    ~p∨~q are elementary sums in two variables.</p>
+                <p class="p-para">A logical expression is said to be in disjunctive form 
+                    if it is the sum of elementary products. For example, p∨(q^r) and p∨(~q^r) 
+                    are in disjunctive normal form, p^(q∨r) is not in disjunctive normal 
+                    form.
+                <br>Example- Obtain the disjunction normal forms of the following.</p>
+                <p class="p-para">a.) p^(p->q)
+                    <br>Solution:
+                    <br>a.) p^(p->q) = p^(~p∨q)
+                    <br> = (p^~q)∨(p^q)
+                    <br> Which is the required disjunctive form.
+                </p>
+                <p class="p-para"><b><u>Conjuctive Normal Form:</u></b></p>
+                <p class="p-para">A logical expression is said to be in conjuctive normal 
+                    form if it consists of a product of elementary sums.
+                    <br>Example: Obtain a conjuctive normal form of the following.
+                    <br>a.) p^(p->r) 
+                    <br>Solution:
+                    <br>a.) p^(p->r) = p^(~p∨q) 
+                    <br>Which is required normal form.
+                </p>  
+            <div class="btnn">
+            <div class="btn1">
+                <a href="discrete_intro.html">Previous</a>
+            </div>
+            <div class="btn1">
+                <a href="discrete_b.html">Next</a>
+            </div>
+            </div>  
+        </main>
+      </div>
+    <!-- Footer -->
+    <div id="footer_file"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        $("#header_file").load("../heads.html");
+        $("#footer_file").load("../footer.html");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Discrete Mathematics</title>
+    <link rel="stylesheet" href="../style/style_a.css">
+    <link rel="stylesheet" href="../style/card.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <div  id="header_file"></div>
+
+
+    <!-- Main contain -->
+    <main>
+        <div class="px-5 py-5">
+            <div class="container" id="start">
+                <h2 class="h2-head">Discrete Mathematics</h2>
+                <p class="p-para">Mathematics is broadly divided into two major branches -the discrete
+                    mathematics and continuous mathematics. Discrete mathematics mostly deals with only
+                    those real numbers which are multiple os some basic unit. If the basic unit is 1, then
+                    the discrete variable can assume only integral values. Discrete mathematics is a rapidly
+                    growing and increasingly used area of mathematics with many practical and relevant
+                    applications.</p>
+                <div>
+                    <img src="./discrete-img/intro.jpg" height="400" width="600">
+                </div>
+            </div>
+            <div class="container">
+                <table>
+                    <th colspan="2">Table Of Content</th>
+                    <tr>
+                        <td>
+                            <ul class="ul-list">
+                                <li><a href="#a">Mathematical Logic</a></li>
+                                <li><a href="#b">Boolean Algebra</a></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="ul-list">
+                                <li><a href="#d">Graph Theory</a></li>
+                                <li><a href="#e">Relation & Function</a></li>
+                            </ul>
+                        </td>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="a" class="links">
+                <h5 class="h2-head"><a href="discrete_a.html">Mathematical Logic:</a></h4>
+                    <p class="p-para">Logic is the science dealing with the methods of reasoning.
+                        Logic which which uses a symbolic language to express its principles in precise
+                        and unambiguous terms is known as mathematical logic. Mathematical logic has
+                        become an accepted part of discrete mathematics. One reason for this is that all
+                        efforts at the verification of algorithms inevitably the notation and methods of
+                        logic.
+                    <p class="p-para">Click on the link (Mathematical Logic) for detail explanation. </p>
+            </div>
+            <div id="b" class="links">
+                <h5 class="h2-head"><a href="discrete_b.html">Boolean Algebra:</a></h5>
+                <p class="p-para">Binary logic deals with variables that take on two discrete values
+                    (like 1 or 0, True or False) and with operations that assume logical meaning.
+                    To build digital logic circuits of various families for different operations, the
+                    basic electronic circuits that are used are inverters and gates. Boolean Algebra is
+                    a simple and systematic way of representing and performing the operations of logic
+                    circuits in modern digital systems. The problem of optimizing the design of these
+                    circuits is essentially a problem of Boolean algebra. </p>
+                <p class="p-para">Click on the link (Boolean Algebra) for detail explanation.</p>
+            </div>
+            <div id="c" class="links">
+                <h5 class="h2-head"><a href="discrete_c.html">Graph theory:</a></h5>
+                <p class="p-para">A graph is a set of points (commonly called vertices
+                    or nodes) in space that are interconnected by a set of lines (called edges).
+                    Graph theory is one of the most important branches of discrete mathematics
+                    and a source of many algorithms of practical importance. Among all the discrete
+                    structures, graphs are the most flexible and adaptable to suit the needs of
+                    applications. It has uses in areas such as syntactic analysis, fault detection
+                    and diagnosis in computers, and minimal path problems.
+                </p>
+                <p class="p-para">Click on the link (Graph therory) for detail explanation.</p>
+            </div>
+            <div id="d" class="links">
+                <h5 class="h2-head"><a href="discrete_d.html">Relations & functions:</a></h5>
+                <p class="p-para">The concept of a relation is a basic concept in computer science
+                    as well as in real life. This concept arises when we consider a pair of objects
+                    and compare one another. A relational database stores information linking attributes
+                    of some set of individuals as a family of n-tuples for some n. Standard examples are
+                    database of airline booking or a medical histories and diagnoses of hospital
+                    patients.</p>
+                <p class="p-para">One of the important concepts in discrete mathematics
+                    is that of function. The term "map", "mapping", "transformation", and
+                    many other mean the same thing. Relation in mathematics describe connections
+                    between different elements of the same set, whereas functions describe
+                    connections between two different sets.
+                </p>
+            </div>
+            <div class="btn">
+                <div class="btn1">
+                    <a href="discrete_a.html">Start Learning</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <div  id="footer_file"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        $("#header_file").load("../heads.html");
+        $("#footer_file").load("../footer.html");
+    </script>
+    
+</body>
+
+</html>
