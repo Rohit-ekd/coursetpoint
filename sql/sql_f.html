@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference between MySQL and NoSQL?</title>
+    <link rel="stylesheet" href="../style/style_a.css">
+    <link rel="stylesheet" href="../style/card.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+    <!-- nav bar -->
+    <div id="header_file"></div>
+    <main>
+        <div class="px-5 py-5">
+            <div class="container" id="start">
+                <h2 class="h2-head">Major Differences</h2>
+            </div>
+            <div>
+                <h3 class="h2-head">Difference between MySQL & NoSQL</h3>
+                <table class="table table-bordered table-hover">
+                    <thread class="thread-dark">
+                        <tr>
+                            <th>MySQL</th>
+                            <th>NoSQL</th>
+                        </tr>
+                    </thread>
+                    <tr>
+                        <td>MySQL is a Relational Database Management System(RDBMS)</td>
+                        <td>NoSQL is a Non-Relational Database Management System.</td>
+                    </tr>
+                    <tr>
+                        <td>It stores data into tables with rows and columns.</td>
+                        <td>It stores data into document-oriented, column-oriented, graph-based, or key-value.</td>
+                    </tr>
+                    <tr>
+                        <td>MySQL is less flexible in terms of schema design.</td>
+                        <td>NoSQL is more flexible in terms of schema design.</td>
+                    </tr>
+                    <tr>
+                        <td>It is well-suited for structured data.</td>
+                        <td>It is well-suited for unstructured or semi-structured data.</td>
+                    </tr>
+                    <tr>
+                        <td>It provides strong consistency and ACID properties.</td>
+                        <td>It does not follow ACID Properties.</td>
+                    </tr>
+                    <tr>
+                        <td>Scaling MySQL can be challenging and often involves complex sharding techniques.</td>
+                        <td>It is better suited for handling large volumes of data and high traffic loads.</td>
+                    </tr>
+                    <tr>
+                        <td>Performance is slower as compared to NoSQL.</td>
+                        <td>It provides high performance and ease of use.</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h3 class="h2-head">Difference between Set Operations and Joins</h3>
+                <table class="table table-bordered table-hover">
+                    <thread class="thread-dark">
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Set Operations</th>
+                            <th>Joins</th>
+                        </tr>
+                    </thread>
+                    <tr>
+                        <td>Purpose</td>
+                        <td>Manipulate result sets based on set theory principles.</td>
+                        <td>Combine data from related tables based on specified conditions.</td>
+                    </tr>
+                    <tr>
+                        <td>Data Source</td>
+                        <td>Result sets of SELECT queries.</td>
+                        <td>Tables that are related by common columns.</td>
+                    </tr>
+                    <tr>
+                        <td>Combining Rows</td>
+                        <td>Combine rows from different result sets. May remove duplicates.</td>
+                        <td>Combine rows from different tables based on specified conditions.</td>
+                    </tr>
+                    <tr>
+                        <td>Output Columns</td>
+                        <td>Require the SELECT queries to have the same number of output columns and compatible data
+                            types.</td>
+                        <td>Can Combine columns from different tables, regardless of data types or column numbers.</td>
+                    </tr>
+                    <tr>
+                        <td>Common Operations</td>
+                        <td>UNION, INTERSECT, EXCEPT(MINUS).</td>
+                        <td>INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN.</td>
+                    </tr>
+                    <tr>
+                        <td>Conditional Requirements</td>
+                        <td>No specific join conditions are required.</td>
+                        <td>Require specified join conditions for combining data.</td>
+                    </tr>
+                    <tr>
+                        <td>Handling Duplicates</td>
+                        <td>UNION removes duplicates by default.</td>
+                        <td>JOINS do not inherently handle duplicates; it depends on the join type and data.</td>
+                    </tr>
+                    <tr>
+                        <td>usage Scenarios</td>
+                        <td>Useful for combining and analysing related data from different queries or tables.</td>
+                        <td>Used to retrieve and related data from different tables based on their relationships.</td>
+                    </tr>
+                    <tr>
+                        <td>Result Set Structure</td>
+                        <td>Results sets may have different column names, but data types and counts must match.</td>
+                        <td>Result sets can have different column names, data types, and counts.</td>
+                    </tr>
+                    <tr>
+                        <td>Performance Considerations</td>
+                        <td>Generally faster and less complex than joins.</td>
+                        <td>Joins can be more complex and resiurce-intensive, especially for larger datasets.</td>
+                    </tr>
+                </table>
+                <h2 class="h2-head">Difference between Subqueries and Joins:</h2>
+                <table class="table table-bordered table-hover">
+                    <thread class="thread-dark">
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Subqueries</th>
+                            <th>joins</th>
+                        </tr>
+                        <tr>
+                            <th>Purpose</th>
+                            <th>Retrieve data for filtering, comparision, or calculation within the context of a larger
+                                query.</th>
+                            <th>Combine data from related tables based on specified conditions.</th>
+                        </tr>
+                        <tr>
+                            <th>Data Source</th>
+                            <th>Result of one query used as input for another query.</th>
+                            <th>Data from multiple related tables.</th>
+                        </tr>
+                        <tr>
+                            <th>Combining Rows</th>
+                            <th>Not used for combining rows; used to filter or evaluate data.</th>
+                            <th>Combines rows from different tables based on specified join conditions.</th>
+                        </tr>
+                        <tr>
+                            <th>Result Set Structure</th>
+                            <th>Subqueries return scalar values, single-column results, or small result sets.</th>
+                            <th>Joins return multi-column result sets. </th>
+                        </tr>
+                        <tr>
+                            <th>Performance Considerations</th>
+                            <th>Subqueries can be slower and less efficient, espicially when dealing with large
+                                datasets.</th>
+                            <th>Joins can be more efficient for combining data from multiple tables.</th>
+                        </tr>
+                        <tr>
+                            <th>Complexity</th>
+                            <th>Subqueries can be easier to understand for simple tasks or smaller datasets.</th>
+                            <th>Joins can become complex, but are more suited for handling large-scale data retrieval
+                                and combination tasks.</th>
+                        </tr>
+                        <tr>
+                            <th>Versatility</th>
+                            <th>Subqueries can be used in various clauses: WHERE, FROM, HAVING, etc.</th>
+                            <th>Joins are primarily used in the FROM clause for combining tables.</th>
+                        </tr>
+                    </thread>
+                </table>
+            </div>
+            <div class="btnn">
+                <div class="btn1">
+                    <a href="sql_e.html">Previous</a>
+                </div>
+                <div class="btn1">
+                    <a href="sql_intro.html">Home</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <div id="footer_file"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        $("#header_file").load("../heads.html");
+        $("#footer_file").load("../footer.html");
+    </script>
+</body>
+
+</html>
