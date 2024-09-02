@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Operators and Java Input-Output</title>
+    <link rel="stylesheet" href="../style/style_a.css">
+    <link rel="stylesheet" href="./java_style.css">
+    <link rel="stylesheet" href="../style/card.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <div id="header_file"></div>
+
+    <!-- Main contain -->
+    <div class="container" id="start">
+        <h2 class="h2-head">Java Operators and Input/Output in Java</h2>
+    </div>
+    <div class="container">
+        <table>
+            <th colspan="2">Table Of Content</th>
+            <tr>
+                <td>
+                    <ul class="ul-list">
+                        <li><a href="#a">Introduction of Operators</a></li>
+                        <li><a href="#b">Arithmetic Operator</a></li>
+                        <li><a href="#c">Unary Operator</a></li>
+                        <li><a href="#d">Logical Operator</a></li>
+                        <li><a href="#e">Relational Operator</a></li>
+                        <li><a href="#f">Assignment Operator</a></li>
+                        <li><a href="#g">Ternary Operator</a></li>
+                        <li><a href="#h">Bitwise Operator</a></li>
+                        <li><a href="#i">Special Operator</a></li>
+                        <li><a href="#j">Precedence and Associativity of Operators</a></li>
+                        <li><a href="#k">I/O in Java</a></li>
+                        <li style="list-style: none;"><a href="#l"></a></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <main>
+        <div class="px-2 py-2">
+            <div>
+                <h5 class="h2-head" id="a">Operators in Java</h5>
+                <p class="p-para">
+                    Java supports a rich sets of Operators. But question is what is an Operators in java ? In simple word
+                    Operators is define as Symbols tell the computer to perform specific Operation and perform mathematical
+                    and logical manipulations that is called an Opertors. operators like +,*,-,/. There are several types of
+                    Operators :
+                </p>
+    
+                <h5 class="h2-head" id="b">Arithmetic Operators</h5>
+                <p class="p-para">Arithmetic Operators are used to perform simple arithmatical operation such +,-,* etc.</p>
+                <ul>
+                    <li>+ : Addition</li>
+                    <li>- : Subtraction</li>
+                    <li>* : Multiplication</li>
+                    <li>/ : Division</li>
+                    <li>% : Modulo(Remainder)</li>
+                </ul>
+                <!-- program -->
+                <div class="container">
+                    <pre class="contain">
+                        <code class="java-program">
+            class Operators {
+                public static void main(String[] args) {
+                    int a = 20;
+                    int b = 6;
+                  
+                    System.out.println("a + b = " + (a + b));
+                    System.out.println("a - b = " + (a - b));
+                    System.out.println("a * b = " + (a * b));
+                    System.out.println("a / b = " + (a / b));
+                    System.out.println("a % b = " + (a % b));
+            
+                }
+            }
+        </code>
+    </pre>
+                </div>
+    
+                <pre class="output"><span>Output:</span> 
+                    a + b = 26
+                    a - b = 14
+                    a * b = 120
+                    a / b = 3
+                    a % b = 2
+                </pre>
+                <h5 class="h2-head" id="c">Unary Operators</h5>
+                <p class="p-para">Unary Operators required only one Operand.</p>
+                <ul>
+                    <li>+x : Unary Plus</li>
+                    <li>-y : Unary Minus</li>
+                    <li>++ : Increment Operator
+                        <ol type="i">
+                            <li>++x : pre-Increment(++ is written Before the operand).</li>
+                            <li>x++ : post-Increment(++ is written After the operand).</li>
+                        </ol>
+                    </li>
+                    <li>-- : Decrement Operator
+                        <ol type="i">
+                            <li>--x : pre-Decrement(-- is written Before the operand).</li>
+                            <li>x-- : post-Decrement(-- is written After the operand).</li>
+                        </ol>
+                    </li>
+    
+                </ul>
+                <!-- program -->
+                <div class="container">
+                    <pre class="contain">
+                        <code class="java-program">
+    class Operators {
+        public static void main(String[] args) {
+            int a = 20;  
+              System.out.println("a++ = " + (a++));   // a = 20 
+              System.out.println("++a = " + (++a));   // a= (20+1) + 1 = 22
+              System.out.println("a-- = " + (a--));   // a= 22
+              System.out.println("--a = " + (--a));   // a = (22-1)-1 = 20
+                  }
+              }
+        </code>
+    </pre>
+                </div>
+                <pre class="output"><span>Output:</span> 
+                    a++ = 20
+                    ++a = 22
+                    a--  = 22
+                    --a  = 20
+                </pre>
+    
+                <h5 class="h2-head" id="d">Logical Operators</h5>
+                <p class="p-para">An expression that combines two or more expressions is termed as a logical expression. The
+                    result of the operation of logical operator is a boolean value either true or false.</p>
+                <ul>
+                    <li>&& : logical AND (This operator gives the net result true if both the condition are true, otherwise
+                        the result is false.)</li>
+                    <li>|| : logical OR (This operator gives the net result false, if both the condition have the value
+                        false, otherwise the result is true.)</li>
+                    <li>! : logical NOT (This Unary operator and it negate the value of the condition. If the value of the
+                        condition is false then it gives the result true and vice-versa.)</li>
+    
+                </ul>
+                <!-- program -->
+                <div class="container">
+                    <pre class="contain">
+                <code class="java-program">
+    class Operators {
+        public static void main(String[] args) {
+            boolean  a = true; 
+            boolean b = true;
+            System.out.println("a AND b = " +(a&&b));  
+            System.out.println("a OR b = " + (a||b ));   
+            System.out.println("NOT a = "+ (!a));    
+                }
+            }
+    </code>
+    </pre>
+                </div>
+                <pre class="output"><span>Output:</span> 
+                    a AND b = true
+                    a OR b = true
+                    NOT a = false
+        </pre>
+    
+                <h5 class="h2-head" id="e">Relational Operators</h5>
+                <p class="p-para">We often to compare two quantities, they depends on their relation.</p>
+                <ul>
+                    <li>
+                        < : is less than </li>
+                    <li>
+                        <= : is less than or equal to </li>
+                    <li> > : is greater than </li>
+                    <li> >= : is greater than or equal to </li>
+                    <li> == : is equal to </li>
+                    <li> != : is not equal to </li>
+                </ul>
+                <!-- program -->
+                <div class="container">
+                    <pre class="contain">
+                <code class="java-program">
+    class Operators {
+    public static void main(String[] args) {
+        int a =7;
+        int b= 6;
+        System.out.println("a < b  : " + (a < b));  
+        System.out.println("a <= b : " + (a <= b) );   
+        System.out.println("a > b : "+ (a > b) );    
+        System.out.println("a >= b : "+ (a >=b) ); 
+        System.out.println("a == b : "+ (a == b) ); 
+        System.out.println("a != b = "+ (a != b) ); 
+          }
+      }
+    </code>
+    </pre>
+                </div>
+                <pre class="output"><span>Output:</span> 
+                    a < b  : false
+                    a <= b : false
+                    a > b : true
+                    a >= b : true
+                    a == b : false
+                    a != b = true         
+        </pre>
+    
+                <h5 class="h2-head" id="f">Assignment Operator</h5>
+                <p class="p-para">Assignment Operators(=) are used to assign the value of a variable. suppose
+                    <code>a = 15</code> is read as 15 assign to variable a.
+                </p>
+                <ul>
+                    <li>+= adding the left operand with the right operand and then assign to the variable on the left.</li>
+                    <li>-= subtracting the left operand with the right operand and then assign to the variable on the left.
+                    </li>
+                    <li>*= multiply the left operand with the right operand and then assign to the variable on the left.
+                    </li>
+                    <li>/= divide the left operand with the right operand and then assign to the variable on the left.</li>
+                    <li>similarly %=, |=, &=, >>=, <<= </li>
+                </ul>
+    
+                <div class="container">
+                    <pre class="contain">
+                <code class="java-program">
+    class Operators {
+    public static void main(String[] args) {
+        int a =7;
+        System.out.println("a += 2  : " + (a += 2));  
+        System.out.println("a -= 5 : " + (a -= 5) );   
+        System.out.println("a *= 3 : "+ (a *= 3) );    
+         System.out.println("a /= 3 : "+ (a /=3) ); 
+        System.out.println("a  >>= 2 : "+ (a >>= 2) ); //4--> 0100 >>=2 -->0001-->1
+        System.out.println("a<<= 3 : "+ (a <<=3) ); //1--> 0001 <<=3 --> 1000--> 8
+        }
+      }
+    </code>
+    </pre>
+                </div>
+                <pre class="output"><span>Output:</span>
+        a += 2  : 9
+        a -= 5 : 4
+        a *= 3 : 12
+        a /= 3 : 4
+        a >>= 2 : 1
+        a <<= 3 : 8
+    </pre>
+    
+                <h5 class="h2-head" id="g">Ternary Opertor/ Conditional Operator</h5>
+                <p class="p-para">The Ternary operator is character pair of ? : operators that are used three expression. In
+                    simple word Ternary Operators are shorthand property of if...else. <br /> Syntax :
+                    <code>Condition ? if_true : if_false</code>
+                </p>
+                <div class="container">
+                    <pre class="contain">
+                <code class="java-program">
+    class Operators {
+    public static void main(String[] args) {
+        int a = 7;
+        int b = 12;
+        boolean isTrue;
+        isTrue = a>b ? true : false ;
+        System.out.println("isTrue = " + isTrue);
+        }
+      }
+    </code>
+    </pre>
+                </div>
+                <pre class="output"><span>Output:</span>isTrue = false</pre>
+                <h5 class="h2-head" id="h">Bitwise Operators</h5>
+                <p class="p-para">As the name suggest operations are perform at bit level. These Operators are used for
+                    testing the bits, or shifting them left or right.</p>
+                <ul>
+                    <li>& : Bitwise AND</li>
+                    <li>| : Bitwise OR</li>
+                    <li>~ : One's complement</li>
+                    <li>^ : Bitwise Exclusive OR</li>
+                    <li>
+                        << : Left shift</li>
+                    <li>>> : right shift</li>
+                    <li>>>> : shift right with zero fill</li>
+                </ul>
+                <div class="container">
+                    <pre class="contain">
+            <code class="java-program">
+    
+    class Operators {
+        public static void main(String[] args) {
+            int a = 0b1001;
+            int b = 0b1100;
+            System.out.println("a & b: " + (a & b)); // 0000 1000 --> 8
+            System.out.println("a | b: " + (a | b));  //0000 1101 -->13 
+            System.out.println("a ^ b: " + (a ^ b)); // 0000 0101 --> 05
+            System.out.println("~a: " + (~a));  // 
+            System.out.println("a << 2: " + (a << 2)); //0010 0100-->36
+            System.out.println("b >> 1: " + (b >> 1)); // 0000 0110 --> 6
+            System.out.println("b >>> 1: " + (b >>> 1));
+                }
+            }
+            </code>
+        </pre>
+                </div>
+                <pre class="output"><span>Output:</span>
+        a & b: 8
+        a | b: 13
+        a ^ b: 5
+        ~a: -10
+        a << 2: 36
+        b >> 1: 6
+        b >>> 1: 6
+    </pre>
+                <code>Note: >> and >>> are bitwise right shift operator, which perform a similar operation. The main difference between two operators is in how they handle the sign bit.</code>
+                <h5 class="h2-head" id="i">Special Operators</h5>
+                <p class="p-para">Java support some special operators of interest such as <strong>instanceof</strong>
+                    operator and <strong>(.) operator.</strong></p>
+                <ul>
+                    <li><span>instanceof operator: </span> The instanceof is an object reference operator and return true if
+                        the object on the left hand side is an instance of the class given to right hand side. This Opertor
+                        allow to determine whether the object belong to a particular class or not.(instanceof operator are
+                        discuss in class and object in java.)</li>
+                    <code><strong>Example : </strong>person instanceof student</code>
+                    <li><span> Dot operator : </span>Dot(.) operator is used to access the instance variable and methods of
+                        class objects.</li>
+                    <code><strong>Example: </strong>person.age</code>
+                </ul>
+    
+                <h5 class="h2-head" id="j">Precedence and Associativity</h5>
+                <p class="p-para">Each Operator in Java has a precedence and Associativity. This precedence determine how an expression involving more than one operator is evaluated. The Operators at the higher level of precedence are evaluated first. The Operators of the same precedence are evaluated either Left to Right or Right to left depends upon its associativity. </p>
+                <img src="./java-img/operators.jpg" alt="" class="img-fluid">
+            </div>  
+            <div>
+                <h5 class="h2-head" id="k">Input-Output in Java </h5>
+                <p class="p-para">Input Output in java is used to take input from the user and give the output to the user, using I/O stream. The <code>java.io</code> package contain all the classes required for excute I/O operation.</p>
+                <h6> Method to take Input in java</h6>
+                <ul>
+                    <li><span>Buffer Reader class for string input in java : </span>using InputStreamReader() is a function that converts the input stream of bytes into a stream of characters so that it can be read as BufferedReader expects a stream of characters.</li>
+                    <div class="container">
+                        <pre class="contain">
+                            <code class="java-program">
+    import java.io.*;
+    class InputOutput{
+      public static void main(String [] args){
+        BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+        String str;
+         try{
+               System.out.println("Enter any String : ");
+               str = obj.readLine();
+               System.out.println("String : " + str);
+         }
+        catch(Exception e){
+           System.out.println(e);
+         }
+      }
+    }
+                            </code>
+                        </pre>
+                    </div>
+    <pre class="output"><span>Output:</span>
+        Enter any String :
+        I love Java
+        String : I love Java
+    </pre>
+    <li><span>Using Scanner class to take an Input: </span>It is new and simple method to take an input in java using <code>java.util.Scanner</code> package.</li>
+    <code><strong>Syntax: Scanner inp = new Scanner(System.in);</strong></code>
+    <div class="container">
+        <pre class="contain">
+            <code class="java-program">
+     import java.util.Scanner;
+    
+    class InputOutput{
+      public static void main(String [] args){
+         Scanner inp = new Scanner(System.in);
+         String name;
+         int id;
+        float salary;
+        System.out.println("Enter Your name: ");
+        name = inp.next();
+        System.out.println("Enter Your Id: "); 
+        id = inp.nextInt();
+        System.out.println("Enter Your Salary: ");
+        salary = inp.nextFloat();
+        System.out.println("Name : "+ name + "\tId: " + id + "\tSalary : "+ salary);
+      }
+    }
+            </code>
+        </pre>
+    </div>
+    <pre class="output"><span>Output:</span>
+        Enter Your name:
+        Rohit
+        Enter Your Id:
+        007
+        Enter Your Salary:
+        50005.36
+        Name : Rohit    Id: 7   Salary : 50005.36
+    </pre>
+                </ul>
+            </div>
+             
+            <div class="btnn">
+                <div class="btn1">
+                    <a href="java_a.html">Previous</a>
+                </div>
+                <div class="btn1">
+                    <a href="java_c.html">Next</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <div id="footer_file"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        $("#header_file").load("../heads.html");
+        $("#footer_file").load("../footer.html");
+    </script>
+</body>
+
+</html>

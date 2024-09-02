@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java API</title>
+    <link rel="stylesheet" href="../style/style_a.css">
+    <link rel="stylesheet" href="./java_style.css">
+    <link rel="stylesheet" href="../style/card.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <div id="header_file"></div>
+
+    <!-- Main contain -->
+  <main>
+    <div class="px-5 py-5">
+        <div class="container" id="start">
+            <h2 class="h2-head">API in Java</h2>
+        </div>
+        <div class="container">
+            <table>
+                <th colspan="2">Table Of Content</th>
+                <tr>
+                    <td>
+                        <ul class="ul-list">
+                            <li><a href="#a">What do you mean by term 'API'</a></li>
+                            <li><a href="#b">Types of API</a></li>
+                            <li><a href="#c">Messaging API</a></li>
+                            <li><a href="#d">Telephony API</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="ul-list">
+                            <li><a href="#e">Speech API</a></li>
+                            <li><a href="#f">Liscense Services API</a></li>
+                            <li><a href="#g">Crypto API</a></li>
+                            <li><a href="#h">System Network Architecture</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+            <div>
+                <h5 class="h2-head" id="a">About API</h5>
+                <p class="p-para">
+                    API(Application Programming Interface) is a collection of communication protocols and subroutines used
+                    by various programs to communicate between them. A programmer can make use of various API tools to make
+                    their program easier and simpler. Also, an API facilitates programmer with an efficient way to develop
+                    their software. <br />
+                    The Java API (Application Programming Interface) is a collection of classes, interfaces, methods, and
+                    other components that provide predefined functionality for developers to use in their Java applications.
+                </p>
+                <h6 class="h2-head">Uses of Java API</h6>
+                <ul>
+                    <li><span>Creating Applications: </span> The Java API provides essential building blocks for creating
+                        various types of applications, including desktop applications, web applications, mobile apps.</li>
+                    <li><span>Graphical User Interfaces (GUI): </span> Java API include libraries like AWT (Abstract Window
+                        Toolkit) and Swing for creating graphical user interfaces (GUIs) in Java applications. Developers
+                        can use these APIs to create windows, buttons, menus, and other GUI components.</li>
+                    <li><span>Networking : </span> Developers can use these APIs to create client-server applications,
+                        communicate over the internet, and interact with remote services.</li>
+                    <li><span>Database Connectivity : </span> Access databases using JDBC(Java Database Connectivity) for
+                        tasks like querying, updating, managing data. Developers can use JDBC to interact with relational
+                        databases using standard SQL queries, execute database operations, and retrieve data from databases.
+                    </li>
+                    <li><span>Mobile Development : </span> Develop Android Application using java, utilizing Android APIs
+                        for various functionality.</li>
+                    <li><span>Provide security : </span> Implementation encryption, digital signature and secure
+                        communication using classes in the javax.crypto packages.</li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="h2-head" id="#b">Types of API</h5>
+                <p class="p-para">There are the 4 types of APIs</p>
+                <ul>
+                    <li><span>Open API(public APIs) : </span> Open APIs are publicly available for any other users their is
+                        no restrictions on accessing them. They allow external users to access data and services provided by
+                        a company.</li>
+                    <li><span>Partner APIs : </span>They are not publicly accessible. Partern APIs require licenses for
+                        access data. They are used by trusted partners or specific developer. </li>
+                    <li><span>Internal APIs(Private APIs) : </span> Only Internal systems within a company expose these
+                        types of APIs. It is Designed for Internal use among different teams within the oragnization.</li>
+                    <li><span>Composite APIs : </span>Composite APIs combine multiple data and service APIs. It allow the
+                        developer to access a set of related functionalities through a single API with simplifies the
+                        complex interactions and provide a great user experience.</li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="h2-head" id="#c">Messaging API (MAPIs)</h5>
+                <p class="p-para">
+                    Messaging is a method of communication between software components or applications. A messaging system
+                    is a peer-to-peer facility: A messaging client can send messages to, and receive messages from, any
+                    other client. Each client connects to a messaging agent that provides facilities for creating, sending,
+                    receiving, and reading messages. <br />
+                    The Java Message Service is a Java API that allows applications to create, send, receive, and read
+                    messages. Designed by Sun and several partner companies, the JMS API defines a common set of interfaces
+                    and associated semantics that allow programs written in the Java programming language to communicate
+                    with other messaging implementations.
+                </p>
+                <h6 class="h2-head">JMS API Architecture</h6>
+                <p class="p-para">A JMS application is composed of the following parts:</p>
+                <img src="./java-img/jms provider.jpg" alt="" class="img-fluid">
+                <ul>
+                    <li>A JMS provider is a messaging system that implements the JMS interfaces and provides administrative
+                        and control features. An implementation of the Java Enterprise Edition platform includes a JMS
+                        provider.</li>
+                    <li>JMS clients are the programs or components, written in the Java programming language, that produce
+                        and consume messages. Any Java EE application component can act as a JMS client.</li>
+                    <li>Messages are the objects that communicate information between JMS clients</li>
+                    <li>Administered objects are preconfigured JMS objects created by an administrator for the use of
+                        clients.</li>
+                </ul>
+                <p class="p-para">Messaging services are:</p>
+                <ul>
+                    <li>Send and Receive Message</li>
+                    <li>MultiCommunication Channel</li>
+                    <li>Message Queuing</li>
+                    <li>Message Templet</li>
+                    <li>Delivery Status</li>
+                    <li>Security Tracking</li>
+                </ul>
+                <h6 class="h2-head">Messaging Domain</h6>
+                <ul>
+                    <li><span>Point-To-Point Messaging Domain : </span> Point to point message application delivered to one
+                        receiver. A sender and a receiver of a message have no timing dependencies. The receiver can fetch
+                        the message whether or not it was running when the client sent the message.</li>
+                    <img src="./java-img/mess1.jpg" alt="" class="img-fluid">
+                    <li><span>Publish/Subscribe Messaging Domain : </span> (pub/sub) messaging domain provide facility to
+                        send one message to multiple receiver.Publishers and subscribers have a timing dependency. A client
+                        that subscribes to a topic can consume only messages published after the client has created a
+                        subscription, and the subscriber must continue to be active in order for it to consume messages.
+                    </li>
+                    <img src="./java-img/mess2.jpg" alt="" class="img-fluid">
+                </ul>
+            </div>
+            <div>
+                <h5 class="h2-head">Telephony API (Telecommunication API)</h5>
+                <p class="p-para">
+                    The java Telephony API(JTAPI) supports Telephony call control. It is an extensible application
+                    programming Interface designed to scale for use in a range of domains, from first party call control in
+                    a consumer device to third-party call control in a large distributed call centers. <br />
+                    Telephony API provides developers with tools to intergrates telephony functions into their applications.
+                    They allow access to features life making and receiving calls, sending SMS, call routing, voice mail,
+                    and more often through cloud-based services. These APIs are used in various applications, from customer
+                    support system to interactive voice response system and beyond.
+                    <br />
+                    Telephony services are :
+                </p>
+                <ul>
+                    <li>Call Control</li>
+                    <li>SMS messaging</li>
+                    <li>Call Management</li>
+                    <li>VoIP(Voice Over Internet Protocol)</li>
+                    <li>Number Validation</li>
+                </ul>
+    
+            </div>
+            <div>
+                <h5 class="h2-head">Speech API</h5>
+                <p class="p-para">Spech API enable applications to convert spoken language into text or vice-versa. Speech
+                    API provides the facilities to recognized and synthesis. These APIs are Machine learning algorithm to
+                    translate spoken words into written text and convert Written text into spoken words. They are used in
+                    various applications including virtual assistants, dictation software, voice-controller device and
+                    speech to text services. <br/>
+                    The Java Speech API allows java application to incorporate speech technology into their user Interfaces. It defines a cross platform API to support command and control recognizers, dictation system and speech synthesizers.
+                </p>
+                <ul>
+                    <li><span>Speech recognition :</span> Speech recognition help to convert spoken language into text.</li>
+                    <li><span>NLP(Natural Language Processing): </span>Some APIs utilized NLP to understand the context and meaning behind the transcribed text for more accurate interpretation.</li>
+                    <li><span>Speech synthesis: </span> speech synthesis help to convert writen text into spoken language. This process involves generating audio Output based on the provided text.</li>
+                </ul>
+                <p class="p-para">For Example : Google cloud speech-to-text, Microsoft azure speech services, conversa web 3.0.</p>
+                <img src="./java-img/speech.jpg" alt="" class="img-fluid">
+            </div>
+            <div>
+                <h5 class="h2-head">Licence Service API</h5>
+                <p class="p-para">
+                    It is combination of three works:
+                </p>
+                <ul>
+                    <li><span>Licence : </span>Generally refers to a legal agreement or permission granted by the software developer to the user to use software under certain condition.</li>
+                    <li><span>Service : </span>Refers to specific functionality or capability provided by software application or platform.</li>
+                    <li><span>API : </span> An API is a set of rules and protocol that allow different software application to communicate and interact with each other with the help of API tools to make their application easier and simpler.</li>
+                </ul>
+                <p class="p-para">
+                    The Java Licence Services API is a set of functions that provides developers with ability to manage software licence programmatically. <br/>
+                    This API facilitates the creation, Validation, activation, and enforcement of software licence ensuring that only authorized user can access and use the application.
+                    <br/> Services provides by Licence API:
+                </p>
+                <ul>
+                    <li>Licence Generation/ Creation</li>
+                    <li>Licence Validation</li>
+                    <li>Licence Activation</li>
+                    <li>Licence enforcement</li>
+                    <li>Licence Revocation</li>
+                    <li>Managing Licence Reporting and Analystics</li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="h2-head">Crypto API(Cryptographic API)</h5>
+                <p class="p-para">
+                    The Crypto API contain the functionality that allow application to encrpyt digital sign data in a flexible sensitive private keydata.
+                    <br/>
+                    All Cryptographic Operation are performed by independent Module known as Cryptographics sercices provider(CSP).
+                    <br/>
+                    Java Cryptofragphic Extensions(JCE) is a set of Java APi's which provides Cryptographic services such as encryption, secret Key Generation, Message Authentication code and Key Agreement.
+                </p>
+                <h6 class="h2-head">Features:</h6>
+                <ul>
+                    <li>Encryption and Decryption</li>
+                    <li>Digital signature</li>
+                    <li>Key Management</li>
+                    <li>Random Number Generation</li>
+                    <li>Secure communication protocol</li>
+                    <li>Platform Independent</li>
+                    <li>Hashing</li>
+                    <li>Performance Optimization</li>
+                </ul>
+                <img src="./java-img/crpto.jpg" alt="" class="img-fluid">
+            </div>
+            <div>
+                <h5 class="h2-head">SNA(System Network Architecture)</h5>
+                <p class="p-para">SNA stands for System Network Architecture is a Networking Architecture developed by IBM in 1974 for mainframe computer system. It define protocols and standards for communication between IBM and Mainframe computer system as well as between mainframe and peripheral devices such as plotter, printer, Monitor.</p>
+                <img src="java-img/sna.jpg" alt="" class="img-fluid">
+                <h6 class="h2-head">Layers of SNA</h6>
+                <p class="p-para"> Multiple Networking layers are resposible for communication.</p>
+                <ul>
+                    <li><span>Physical Layer: </span>This layer deals with the physical transmission of data over the network, including encoding, signaling, and electrical characteristics.</li>
+                    <li><span>Data link Layer : </span>The Data link Layer layer ensures error-free transmission of data across the network. It handles error detection, retransmission, and flow control.</li>
+                    <li><span>Data Flow and Control Layer:</span> The data flow and control layer manages the flow and sequencing of data between Logical unit, ensuring reliable delivery.</li>
+                    <li><span>Boundary Control Layer : </span> The Boundary control layer establishes, maintains, and terminates sessions between LUs.</li>
+                    <li><span>Transmission Control Layer: </span>The Transmission layer handles end-to-end error recovery, flow control, and synchronization.</li>
+                </ul>
+            </div>
+            <div class="btnn">
+                <div class="btn1">
+                    <a href="java_k.html">Previous</a>
+                </div>
+                <div class="btn1">
+                    <a href="java_m.html">Next</a>
+                </div>
+            </div>
+    </div>
+  </main>
+    <!-- Footer -->
+    <div id="footer_file"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        $("#header_file").load("../heads.html");
+        $("#footer_file").load("../footer.html");
+    </script>
+</body>
+
+</html>

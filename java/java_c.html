@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control Statement in Java</title>
+    <link rel="stylesheet" href="../style/style_a.css" />
+    <link rel="stylesheet" href="./java_style.css" />
+    <link rel="stylesheet" href="../style/card.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <!-- nav bar -->
+    <div id="header_file"></div>
+
+    <!-- Main contain -->
+    <main>
+      <div class="px-2 py-2">
+        <div class="container" id="start">
+          <h2 class="h2-head">Control Statement in Java</h2>
+        </div>
+        <div class="container">
+          <table>
+            <th colspan="2">Table Of Content</th>
+            <tr>
+              <td>
+                <ul class="ul-list">
+                  <li><a href="#a">What is Control Statement in Java?</a></li>
+                  <li>
+                    <a href="#b">Selection Statement</a>
+                    <ul>
+                      <li><a href="#c">Simple If statement</a></li>
+                      <li><a href="#d">If ... Else statement</a></li>
+                      <li><a href="#e">Nesting of If...Else statement</a></li>
+                      <li><a href="#f">Else...If Ladder</a></li>
+                      <li><a href="#g">Switch Statement</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#h">Iteration Statement</a>
+                    <ul>
+                      <li><a href="#i">While Loop</a></li>
+                      <li><a href="#j">do-while Loop</a></li>
+                      <li><a href="#k">For Loop</a></li>
+                      <li><a href="#l">For-each Loop</a></li>
+                      <li><a href="#m">Nesting of Loop</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#n">Jump Statement</a>
+                    <ul>
+                      <li><a href="#o">Break Statement</a></li>
+                      <li><a href="#p">Continue Statement</a></li>
+                      <li><a href="#q">Return Statement</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div>
+          <h5 class="h2-head" id="a">Control Statement in Java</h5>
+          <p class="p-para">
+            In Java Programming Language uses control statements to cause the
+            flow of execution to advance and branch based on changes to the
+            state of a Program. Java's program control statements can be put
+            into the following categories: Selection, Iteration and Jump.
+          </p>
+          <img
+            src="./java-img/control statement.jpg"
+            alt=""
+            class="img-fluid"
+          />
+          <h5 class="h2-head" id="b">Selection Statement</h5>
+          <p class="p-para">
+            Java support Selection statement that allow you to control the flow
+            of statement based upon condition during run time.
+          </p>
+          <h6 class="h2-head" id="c">Simple If statement</h6>
+          <p class="p-para">
+            The <strong>if</strong> statement is a powerful decision making
+            statement used to control flow of Execution statements. If the
+            expression is true, then statement1 is executed and if false
+            statement1 will skipped and execute next statement.
+          </p>
+          <strong
+            >Syntax:
+            <code>
+              <pre class="syntax">
+                if(expression){
+                    statement1;
+                }
+                statement2;
+                        </pre
+              >
+            </code>
+          </strong>
+          <img src="./java-img/if.jpg" alt="" class="img-fluid" />
+          <!-- program -->
+          <div class="container">
+            <pre class="contain">
+                        <code class="java-program">
+    class Statement{
+        public static void main(String [] args){
+            boolean condition =true;    
+            // if statement 
+            if(condition){ 
+              System.out.println("Condition is True.");    
+            }
+            System.out.println("Condition is False.");
+        }
+    }
+        </code>
+    </pre>
+          </div>
+
+          <pre class="output"><span>Output:</span> 
+                    Condition is True.
+                    Condition is False.
+                </pre>
+          <h5 class="h2-head" id="d">If-Else statement</h5>
+          <p class="p-para">
+            If Condition is true, then the true-block statement immidiately
+            executed otherwise; the false-block of statement is executed.
+          </p>
+          <strong
+            >Syntax:
+            <code>
+              <pre class="syntax">
+                if(condition){
+                    statement1;
+                    statement2;
+                }
+                else{
+                    statement3;
+                }
+                        </pre
+              >
+            </code>
+          </strong>
+          <img
+            src="./java-img/if-else.jpg"
+            alt="if-else flow chart"
+            class="img-fluid"
+          />
+
+          <!-- program -->
+          <div class="container">
+            <pre class="contain">
+                        <code class="java-program">
+    class Statement{
+        public static void main(String [] args){
+               boolean condition = false;    
+               // if-else statement 
+              if(condition){ 
+                 System.out.println("Java is Not Interesting.");    
+              }
+            else{
+             System.out.println("Java is Interesting and Easy.");
+             }
+          }
+        }
+        </code>
+    </pre>
+          </div>
+          <pre
+            class="output"
+          ><span>Output:</span> Java is Interesting and Easy.</pre>
+
+          <h5 class="h2-head" id="e">Nesting of If-else statement.</h5>
+          <p class="p-para">
+            In simple nesting of if-else statement is define as one or more than
+            one if-else statement part of if or else block.
+          </p>
+          <strong
+            >Syntax:
+            <code>
+              <pre class="syntax">
+        if(condition1){
+            if(condition2){
+                statement1;
+            }
+            else{
+                statement2;
+            }
+        }
+        else{
+            if(condition3){
+                statement3;
+            }
+            else{
+                statement4;
+            }
+        }
+                        </pre
+              >
+            </code>
+          </strong>
+          <img
+            src="./java-img/nesting.jpg"
+            alt="nesting of if-else"
+            class="img-fluid"
+          />
+          <!-- program -->
+          <div class="container">
+            <pre class="contain">
+                       <code class="java-program">
+    /*Program to demonstrate greatest of three number using nesting if else.*/
+    class Statement{
+     public static void main(String [] args){
+            int a = 9;
+            int b = 16;
+            int c = 7;
+            if( a>b)
+            {
+               if(a>c)
+                   System.out.println("a is Greatest Number.");
+               else
+                  System.out.println("c is Greatest Number");
+             }
+            else{
+               if(b>c)
+                  System.out.println("b is Greatest Number");
+               else
+                  System.out.println("c is Greatest Number");
+            }
+       }
+     }
+    </code>
+    </pre>
+          </div>
+          <pre class="output"><span>Output:</span> b is Greatest Number</pre>
+
+          <h5 class="h2-head" id="f">ElseIf Ladder</h5>
+          <p class="p-para">
+            This is a type of nesting in which there is an if-else statement in
+            every else part expect the last else part.
+          </p>
+          <strong
+            >Syntax:
+            <code>
+              <pre class="syntax">
+    if(condition1){
+        statement1;
+    }
+    else if(condition2){
+        statement2;
+    }
+    else if(condition3){
+        statement3;
+    }
+    else{
+        default statement;
+    }
+                        </pre
+              >
+            </code>
+          </strong>
+          <img
+            src="./java-img/else-if.jpg"
+            alt="else-if Leader"
+            class="img-fluid"
+          />
+          <!-- program -->
+          <div class="container">
+            <pre class="contain">
+                <code class="java-program">
+    /*Program to find out the grate of student when the marks of 5 subjects are given.*/
+    import java.util.Scanner;
+    class Statement{
+     public static void main(String [] args){
+        float m1,m2,m3,m4,m5,per;
+        Scanner sc = new Scanner(System.in);
+            System.out.println("Enter Your marks : ");
+            m1 = sc.nextFloat();
+            m2 = sc.nextFloat();
+            m3= sc.nextFloat();
+            m4 = sc.nextFloat();
+            m5 = sc.nextFloat();
+            per = (m1+m2+m3+m4+m5)/5;
+            System.out.println("Your Percentage: " + per);
+                if (per <= 100 && per >= 90)
+                    System.out.println("A+ Grade");
+                else if (per < 90 && per >= 80)
+                    System.out.println("A Grade");
+                else if (per < 80 && per >= 70)
+                    System.out.println("B Grade");
+                else if (per < 70 && per >= 60)
+                    System.out.println("C Grade");
+                 else if (per < 60 && per >= 50)
+                    System.out.println("D Grade");
+                else if (per < 50 && per >= 40)
+                    System.out.println("E grade");
+                else
+                System.out.println("You are fail! ");
+                }
+            }
+    </code>
+    </pre>
+          </div>
+          <pre class="output"><span>Output:</span> 
+                    Your Percentage: 73.2
+                    B Grade
+        </pre>
+
+          <h5 class="h2-head" id="g">Switch statement</h5>
+          <p class="p-para">
+            The Swtich statement tests the value of a given variable(or
+            expression) against a list of case values and when a match is found,
+            a block of statement associated with that case is executed otherwise
+            default case block is executed (Optional). The syntax of switch
+            statement is given below:
+          </p>
+          <strong>
+            Syntax:
+            <code>
+              <pre class="syntax">
+            switch(expression){
+                case < value >:
+                    block1;
+                    break;
+                
+                case < value >:
+                    block2;
+                    break;
+                
+                default :
+                    default-block;
+                    break;
+            }                
+                        </pre
+              >
+            </code>
+          </strong>
+          <img
+            src="./java-img/switch-a.jpg"
+            alt="switch_case"
+            class="img-fluid"
+          />
+
+          <div class="container">
+            <pre class="contain">
+                <code class="java-program">
+    class Statement{
+      public static void main(String [] args){
+         int day = 2;
+         switch(day){
+             case 1 : 
+                    System.out.println("Monday");
+                    break;
+             case 2 : 
+                    System.out.println("Tuesday");
+                    break;
+             case 3 : 
+                    System.out.println("Wednesday");
+                    break;
+             case 4 : 
+                    System.out.println("Thursday");
+                    break;
+             case 5 : 
+                    System.out.println("Friday");
+                    break;
+             case 6 : 
+                    System.out.println("Saturday");
+                    break;
+             case 7 : 
+                    System.out.println("Sunday");
+                    break;
+             default : 
+                    System.out.println("Invalid day!");
+                    break;
+        }
+      }
+    }
+    </code>
+    </pre>
+          </div>
+          <pre class="output"><span>Output:</span>Tuesday</pre>
+
+          <h5 class="h2-head" id="h">Loop Statement</h5>
+          <p class="p-para">
+            Loop are used when we want to execute a block of statement or a part
+            of program at multiple times. suppose a program to print " hello
+            world " 20 times. one way to get the desired output using
+            System.out.println statements, which is bad programming skill or not
+            preferable, other way we can use loop to print the "hello world "
+            easily. <br />The Process of repeatedly executing a block of
+            statements is known as Looping. The Statement in the block may be
+            executed any number of times, from zero to infinite number.
+          </p>
+          <h5 class="h2-head" id="i">While Loop</h5>
+          <p class="p-para">
+            While loop is also called Entry control loop. In while loop first
+            the expression is check , if it is true then the statements in the
+            body of loop is executed. After the execution , codition is checked
+            once again If it is true futher execute the body of loop and check
+            again & again. otherwise, It is terminated immidiately to the body
+            of loop.
+          </p>
+          <strong
+            >Syntax:
+            <code>
+              <pre class="syntax">
+    initialization;
+    while(expression){
+        body of loop;
+    }
+                        </pre
+              >
+            </code>
+          </strong>
+          <img src="./java-img/while loop.jpg" alt="" class="img-fluid" />
+          <div class="container">
+            <pre class="contain">
+            <code class="java-program">
+    class Statement{
+        public static void main(String [] args){
+             int i = 0;  // initialization
+             while(i < 5){   // (i < 5) expression
+               System.out.println("Hello Java!");
+               i++;   //updation
+            }
+          }
+        }        </code>
+        </pre>
+          </div>
+          <pre class="output"><span>Output:</span>
+    Hello Java!
+    Hello Java!
+    Hello Java!
+    Hello Java!
+    Hello Java!
+    </pre>
+          <h5 class="h2-head" id="j">Do-While Loop</h5>
+          <p class="p-para">
+            do-while loop is similar to while loop, but do-while first execute
+            the body of loop than after execution it check the condition. It
+            means if condition is false at least once body of loop is executed
+            this reason do-while loop is also called exit control loop.
+          </p>
+          <strong
+            >Syntax:
+            <code>
+              <pre class="syntax">
+    initialization;
+    do{
+        body of loop
+    }while(condition);
+                        </pre
+              >
+            </code>
+          </strong>
+          <img src="./java-img/do-while.jpg" alt="do-while" class="img-fluid" />
+          <div class="container">
+            <pre class="contain">
+            <code class="java-program">
+    class Statement{
+        public static void main(String [] args){
+             int i=1;  
+               do{ 
+               System.out.println("Learn java with courseTpoint!");
+               i++;
+            }while(i==0);
+          }
+        }        </code>
+        </pre>
+          </div>
+          <pre
+            class="output"
+          ><span>Output:</span>Learn java with courseTpoint!</pre>
+          <h5 class="h2-head">Difference Between While and Do-while Loop</h5>
+          <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+              <tr>
+                <th>while loop</th>
+                <th>do-while loop</th>
+              </tr>
+            </thead>
+
+            <tr>
+              <td>
+                It is a looping construct that will execute only if the test
+                condition is true.
+              </td>
+              <td>
+                It is looping construct that will execute at least once even if
+                the test condition is false.
+              </td>
+            </tr>
+            <tr>
+              <td>It is an entry-controlled loop.</td>
+              <td>It is an exit-controlled loop.</td>
+            </tr>
+            <tr>
+              <td>Checks the loop condition before entering the loop.</td>
+              <td>Checks the loop condition after entering the loop.</td>
+            </tr>
+            <tr>
+              <td>
+                Use when you want to execute a loop only if condition is true
+                from the start.
+              </td>
+              <td>
+                Use when want to ensure the loop body executes at least once
+                before checking the condition.
+              </td>
+            </tr>
+          </table>
+          <h5 class="h2-head" id="k">For Loop</h5>
+          <p class="p-para">
+            The for loop is another entry-controlled loop that provides a more
+            concise loop control structure. The general form of the for loop is
+          </p>
+          <strong
+            >Syntax:
+            <code>
+              <pre class="syntax">
+    for(initialization; condition ; increment/decrement){
+        body of loop
+    }
+                        </pre
+              >
+            </code>
+          </strong>
+          <img src="./java-img/for loop.jpg" alt="for-loop" class="img-fluid" />
+          <div class="container">
+            <pre class="contain">
+            <code class="java-program">
+    class Statement{
+        public static void main(String [] args){
+            for(int i =0 ; i < 5 ; i++){
+                System.out.printf(i + "\t");
+            }
+          }
+        }     </code>
+        </pre>
+          </div>
+          <pre
+            class="output"
+          ><span>Output:</span> 0       1       2       3       4</pre>
+        </div>
+        <div>
+          <h5 class="h2-head" id="l">For Each Loop</h5>
+          <p class="p-para">
+            For each loop is enhanced form of for loop. for-each style for
+            automated preceding loop.
+          </p>
+          <strong
+            >Syntax:
+            <code>
+              <pre class="syntax">
+    for(type var : collection){
+        statement-block
+    }
+                        </pre
+              >
+            </code>
+          </strong>
+          <img src="./java-img/for-each.jpg" alt="" class="img-fluid" />
+          <div class="container">
+            <pre class="contain">
+                        <code class="java-program">
+    import java.io.*;
+    class Statement  
+    {  
+        public static void main(String[] args) 
+        { 
+            // array declaration 
+            int arr[] = { 10,5,9,3,6 }; 
+            for (int value : arr) 
+                System.out.print(value + " "); 
+        } 
+    }
+                        </code>
+                    </pre>
+          </div>
+          <pre class="output"><span>Output:</span> 10 5 9 3 6</pre>
+          <h5 class="h2-head" id="m">Nesting of loops</h5>
+          <p class="p-para">
+            When a loop is written inside another loop is known nesting of loop.
+            Any type of loop can be nested inside any other type of loop. for
+            example a for loop may be nested inside another for loop or inside a
+            while or do-while loop.
+          </p>
+          <strong
+            >Output:
+            <code>
+              <pre class="syntax">
+    for ( initialization; condition; update ) 
+    {
+        for ( initialization; condition; update )
+         {
+             // statement of inside loop
+         }
+        // statement of outer loop
+    }
+                        </pre
+              >
+            </code>
+          </strong>
+          <img
+            src="./java-img/nesting-loop.jpg"
+            alt="nesting-loop flow chart"
+            class="img-fluid"
+          />
+          <div class="container">
+            <pre class="contain">
+                        <code class="java-program">
+    class Statement  
+    {  
+        public static void main(String[] args) 
+        { 
+           for(int i=0; i < 5; i++){  //outer loop
+              for(int j=0; j < 5 ; j++){ //inner loop
+                  System.out.printf(i + "," + j +"\t");
+                 }
+              System.out.println("");
+           }
+        } 
+    }
+                        </code>
+                    </pre>
+          </div>
+          <pre class="output"><span>Output:</span>
+    0,0     0,1     0,2     0,3     0,4
+    1,0     1,1     1,2     1,3     1,4
+    2,0     2,1     2,2     2,3     2,4
+    3,0     3,1     3,2     3,3     3,4
+    4,0     4,1     4,2     4,3     4,4
+    </pre>
+
+          <h5 class="h2-head" id="n">Jump Statement</h5>
+          <p class="p-para">
+            Java Support three jump statement break, continue, and return. These
+            statement transfer control to another part of program.
+          </p>
+          <ul>
+            <li id="o">
+              <span>Break : </span>Break statement is encountered inside a loop,
+              the loop is terminated and program control resumes at the next
+              statement following the loop.
+            </li>
+            <strong>Syntax: <code class="syntax">break;</code></strong
+            ><br />
+            <img src="./java-img/break.jpg" alt="break" class="img-fluid" />
+            <div class="container">
+              <pre class="contain">
+                <code class="java-program">
+    class Statement  
+    {  
+        public static void main(String[] args) 
+        { 
+           for(int i=0; i < 5; i++){
+             if(i==3){
+                break;
+            }
+            System.out.println(i);
+           }
+        } 
+    }
+                </code>
+            </pre>
+            </div>
+            <pre class="output"><span>Output: </span>0   1   2</pre>
+            <li id="p">
+              <span>Continue: </span>Java support another similar statement
+              called the continue statement. However, unlike the break which
+              cause the loop to be terminate, the <strong>continue</strong>, as
+              the name implies, causes the loop to be continued with the next
+              iteration after skipping any statements in between.
+            </li>
+            <strong>Syntax : <code class="syntax">continue;</code></strong>
+            <img
+              src="./java-img/continue.jpg"
+              alt="continue-flow cart"
+              class="img-fluid"
+            />
+            <div class="container">
+              <pre class="contain">
+                <code class="java-program">
+    class Statement  
+    {  
+        public static void main(String[] args) 
+        { 
+           for(int i=0; i < 5; i++){
+         if(i==3){
+                        continue;
+                    }
+              System.out.println(i);
+           }
+        } 
+    }
+                </code>
+            </pre>
+            </div>
+            <pre class="output"><span>Output:</span> 0   1    2    4</pre>
+            <li id="q">
+              <span>Return: </span>The return statement is used to explicity
+              return from a method. In simple we can say return statement help
+              to transfer control from one method to another.
+            </li>
+            <strong>Syntax: <code class="syntax">return;</code></strong>
+            <img src="./java-img/return .jpg" alt="" class="img-fluid" />
+            <div class="container">
+              <pre class="contain">
+                <code class="java-program">
+    class Statement  
+    {  
+      public static int sum(int a, int b)
+    {
+        return (a+b) ;
+     }
+        public static void main(String[] args) 
+        { 
+            System.out.println("sum = " + sum(5,6));
+        } 
+    }            </code>
+            </pre>
+            </div>
+            <pre class="output"><span>Output: </span>sum = 11</pre>
+          </ul>
+        </div>
+        <div class="btnn">
+          <div class="btn1">
+            <a href="java_b.html">Previous</a>
+          </div>
+          <div class="btn1">
+            <a href="java_d.html">Next</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <div id="footer_file"></div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+      $("#header_file").load("../heads.html");
+      $("#footer_file").load("../footer.html");
+    </script>
+  </body>
+</html>

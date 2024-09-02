@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods in Java</title>
+    <link rel="stylesheet" href="../style/style_a.css">
+    <link rel="stylesheet" href="./java_style.css">
+    <link rel="stylesheet" href="../style/card.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <div id="header_file"></div>
+
+    <!-- Main contain -->
+   <main>
+    <div class="px-5 py-5">
+        <div class="container" id="start">
+            <h2 class="h2-head">Methods in Java</h2>
+        </div>
+        <div class="container">
+            <table>
+                <th colspan="2">Table Of Content</th>
+                <tr>
+                    <td>
+                        <ul class="ul-list">
+                            <li><a href="#a">About Java Methods</a></li>
+                            <li><a href="#b">Method Declaration</a></li>
+                            <li><a href="#c">Types of Method</a></li>
+                            <li><a href="#d">Naming of Method</a></li>
+                            <li><a href="#e">Method Calling</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+       
+            <div>
+                <h5 class="h2-head" id="a">Methods in Java</h5>
+                <p class="p-para">
+                    Methods are block of statement or code that perform specific task. Methods are used to perform certain
+                    actions, and they are also known as functions.
+                    <br />
+                <ul>
+                    <li>Java Methods Help in code Reusability when we create a Method we can use many time in the package
+                        and outside the package.</li>
+                    <li>Java Method help to time savers and help us to reuse the code without retyping the code. </li>
+                    <li>Set of code perform specific task.</li>
+                </ul>
+                </p>
+                <strong>Syntax:
+                    <code>
+                            <pre class="syntax">
+    < access_modifier > < return_type > < Method_Name> ( parameter list){
+        ............
+        ............
+        body
+    }
+                            </pre>
+                        </code>
+                </strong>
+    
+    
+                <h5 class="h2-head" id="b">Declaration Method in Java</h5>
+                <p class="p-para">A class with only object field has no life. Method that are necessary for manipulating the
+                    data contained in the class. Methods are declare inside the body of the class but immediately after the
+                    Declaration of instance variable. <br />
+                    Method declaration have six basic parts:</p>
+                <ol>
+                    <li><span>Modifier(optional):</span> It define the access type of method.
+                        <ul>
+                            <li>default</li>
+                            <li>public</li>
+                            <li>private</li>
+                            <li>protected</li>
+                        </ul>
+                    </li>
+                    <li><span>Return type : </span>The datatype required to return the value and void type that does not
+                        return any value.</li>
+                    <li><span>Method Name : </span>Method name is most important in declaration, unique name that is used to
+                        define the name of a method.</li>
+                    <li><span>Parameter List(Optional) : </span>List of data that seperated by comma and enclosed by
+                        parentheses. If there is no parameter ,that represent by empty parentheses().</li>
+                    <li><span>Exception List(Optional) : </span> Sometime you can expect the method throw an error that
+                        specified expection(e).</li>
+                    <li><span>Method Body(Optional): </span> It can perform specific task that we are assign it. It is
+                        enclosed within the pair of curly braces.</li>
+                </ol>
+    
+                <img src="./java-img/method.jpg" alt="" class="img-fluid">
+                <div>
+                    <h5 class="h2-head" id="c">Types of Method</h5>
+                    <p class="p-para">There are two types of method in java.
+                    <ol>
+                        <li><span>Predefine Method : </span>
+                            As the name suggest method are define in java class labraries are called predefine methods. We
+                            can directly use these methods just by calling them in the program at any point. Let consider an
+                            example we find square of a number that in java libraries predefine method name sqrt() are used.
+                        </li>
+                        <div class="container">
+                            <pre class="contain">
+                                    <code class="java-program">
+    // program to demonstrate predefine methods in java
+    
+    public class DemoMethod {
+        public static void main(String[] args) {
+            // Define a variable to hold the number
+            double number = 256;
+    
+            // Calculate the square root using Math.sqrt() method and print result
+            System.out.println("Square root of " + number + " is: " + Math.sqrt(number));
+        }
+    }
+                                    </code>
+                                </pre>
+                        </div>
+                        <pre class="output"><span>Output : </span> Square root of 256.0 is: 16.0 </pre>
+                        <p class="p-para"> Here are some commonly used predefined methods in Java:</p>
+                        <table class="table table-bordered table-hover">
+                            <tr class="thead-dark">
+                                <th>Methods</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>String Methods:</td>
+                                <td>
+                                    <ul>
+                                        <li>length()</li>
+                                        <li>charAt(int index)</li>
+                                        <li>substring(int beginIndex, int endIndex)</li>
+                                        <li>toUpperCase()</li>
+                                        <li>toLowerCase()</li>
+                                        <li>indexOf(String str)</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Math Methods:</td>
+                                <td>
+                                    <ul>
+                                        <li>abs(int a)</li>
+                                        <li>max(int a, int b)</li>
+                                        <li>min(int a, int b)</li>
+                                        <li>sqrt(double a)</li>
+                                        <li>pow(double a, double b)</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Array Methods:</td>
+                                <td>
+                                    <ul>
+                                        <li>length</li>
+                                        <li>clone()</li>
+                                        <li>sort()</li>
+                                        <li>toString()</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>File Methods:</td>
+                                <td>
+                                    <ul>
+                                        <li>exists()</li>
+                                        <li>isFile()</li>
+                                        <li>isDirectory()</li>
+                                        <li>listFiles()</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Scanner Methods:</td>
+                                <td>
+                                    <ul>
+                                        <li>nextInt()</li>
+                                        <li>nextDouble()</li>
+                                        <li>nextLine()</li>
+                                        <li>hasNext()</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                        <li><span>UserDefine Method : </span> The methods are written by developer or programmer to perform
+                            specific task that are called user define Methods.</li>
+                        <h6 class="h2-head">Way to create User Define Method</h6>
+                        <p class="p-para">There are Two way to create user define methods:</p>
+                        <ul>
+                            <li><span>Static Method : </span> Static Method are accessed through the class itself. Static
+                                method declare usind <code>static</code> Keyword.</li>
+                            <li><span>Instance Method : </span> Instance Method are accessed through object of the class. Instance method are declare without using static Method.
+                            </li>
+                        </ul>
+                        <div class="container">
+                            <pre class="contain">
+                                    <code class="java-program">
+    import java.util.Scanner;
+    // program to demonstrate Userdefine methods in java
+    
+    public class DemoMethod {
+    //static method
+     public static void evenOdd(int n){
+        if(n%2==0)
+                 System.out.println("even");
+        else
+                System.out.println("odd");
+         }
+      //instance method
+      public void show(){
+         System.out.println("Instance Method");
+        }
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter Number : ");
+            int num = sc.nextInt();
+            evenOdd(num);
+             //Creating an object of the class 
+             DemoMethod obj  = new DemoMethod();
+             //invoke instance method
+             obj.show();
+        }
+    }
+                                    </code>
+                                </pre>
+                        </div>
+                        <pre class="output"><span>Output: </span>
+     Enter Number :
+     6
+     even
+     Instance Method
+                            </pre>
+                    </ol>
+    
+                </div>
+    
+                <div>
+                    <h5 class="h2-head" id="d">Naming of Methods</h5>
+                    <p class="p-para">
+                        Method names should be descriptive and follow the conventions of camelCase, starting with a lowercase letter.
+                        <br />
+                        <ul>
+                            <li>While define method, remember that the method name should be a verb and start with lowercase letter.</li>
+                            <li>If the method name has more than two words, the first name should be verb followed by an noun or adjective.</li>
+                            <li>In Multiwords method name, first letter of the first word is lowercase and secord word with uppercase. such as : addNum, checkPrime, findSum etc.</li>
+                        </ul>
+                    </p>
+                </div>
+                <div>
+                    <h5 class="h2-head" id="e">Method Calling</h5>
+                    <p class="p-para">
+                        Method calling in Java refers to invoking a method to execute its code. Know lets suppose you create a program that calculate area and perimeter of circle you create two methods:
+                        <ul>
+                            <li>calArea()</li>
+                            <li>calPeri()</li>
+                        </ul> 
+                        Dividing a complex problem into smaller chunks makes your program easy to understand and reusable.
+                    </p>
+                    <p class="p-para">
+                        In the above example, we have declared a two method named calArea() and CalPeri() . Now, to use the method, we need to call it.
+                        <br/>
+                        Here's is how we can call the calArea() and calPeri() method.
+                    </p>
+                    <div class="container">
+                        <pre class="contain">
+                            <code class="java-program">
+    import java.util.Scanner;
+    class Circle{
+     public static double calArea(double rad){  //static method declaration
+       double area = Math.PI * Math.pow(rad, 2);
+       return area;
+      }
+     public static double calPeri(double rad){  //static method declaration
+      double peri = 2*Math.PI *rad;
+      return peri;
+      }
+     public static void main(String [] args ){
+      double radius;
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Input the Radius of a circle : ");
+      radius = sc.nextDouble();
+      double area = calArea(radius);         // calArea() Method call
+      System.out.println("Area of a circle : " + area); 
+      double perimeter = calPeri(radius);     // calPeri Method call
+      System.out.println("Perimeter of a circle : " + perimeter); 
+      }
+    } 
+                            </code>
+                        </pre>
+                    </div>
+    <pre class="output"><span>Output:</span>
+    Input the Radius of a circle : 3.2
+    Area of a circle : 32.169908772759484
+    Perimeter of a circle : 20.106192982974676
+    </pre>
+    
+    <p class="para">In the above program methods calArea() and calperi() are called and return the area and perimeter of a circle.</p>
+    <img src="./java-img/calling.jpg" alt="" class="img-fluid">
+    <ul>
+        <li><span>Method return type: </span> A Java method may or may not return a value to the function call. We use the return statement to return any value. </li>
+        <li><span>Method parameter: </span> A method parameter is a value accepted by the method. As mentioned earlier, a method can also have any number of parameters.</li>
+    </ul>
+                </div>
+    
+                <div class="btnn">
+                    <div class="btn1">
+                        <a href="java_g.html">Previous</a>
+                    </div>
+                    <div class="btn1">
+                        <a href="java_i.html">Next</a>
+                    </div>
+                </div>
+
+    </div>
+   </main>
+    <!-- Footer -->
+    <div id="footer_file"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        $("#header_file").load("../heads.html");
+        $("#footer_file").load("../footer.html");
+    </script>
+</body>
+
+</html>

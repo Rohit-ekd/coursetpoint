@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constant,Variable and Datatypes in java</title>
+    <link rel="stylesheet" href="../style/style_a.css">
+    <link rel="stylesheet" href="./java_style.css">
+    <link rel="stylesheet" href="../style/card.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <div id="header_file"></div>
+
+    <!-- Main contain -->
+<main>
+    <div class="px-2 py-2">
+        <div class="container" id="start">
+            <h2 class="h2-head">Java Constant, Variable and Data Types</h2>
+        </div>
+        <div class="container">
+            <table>
+                <th colspan="2">Table Of Content</th>
+                <tr>
+                    <td>
+                        <ul class="ul-list">
+                            <li><a href="#a">Constant</a></li>
+                            <li><a href="#b">Variables</a></li>
+                            <li><a href="#c">DataTypes</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="ul-list">
+                            <li><a href="#d">Declaration of Variable</a></li>
+                            <li><a href="#e">Scope of Variable</a></li>
+                            <li><a href="#f">Type Casting</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+            <div>
+                <h5 class="h2-head" id="a">Constants in Java</h5>
+                <p class="p-para">
+                    Constants in java refer to fixed values that do not change during the execution of a program. Java
+                    Support several types of constants:
+                </p>
+                <ol>
+                    <li><span>Integer Constant : </span>An Integer constant refers to sequence of digits such as decimal ,
+                        octal and hexadecimal integers.
+                        <ul>
+                            <li>Decimal Integer: Decimal digits contain 0 to 9 digits for ex: <code>123, -321 , 0 </code>
+                                etc.</li>
+                            <li>Octal Integer: Octal Interger constant contain of any cobination of digits from 0 to 7, with
+                                leading 0. for ex: <code>037, 0, 0432, 0555</code> etc.</li>
+                            <li>Hexadecimal Integer: A sequence of digits preceded by 0x or 0X is considered as hexadecimal.
+                                for ex: <code>0x2, 0X9F2</code> etc.</li>
+                        </ul>
+                    </li>
+                    <li><span>Real Constants : </span> Integer number are not eligible to represent that quantities such as
+                        distance, height, weigth due to that quantities number containing frictioanl parts like
+                        <code>17.856</code>. Such numbers are called Real(floating) Constants. <br /> A Real number is also
+                        be expressed in exponential notation. For Example, the value <code>212.65</code> may be written as
+                        2.1256e2 in exponential notation .e2 means 10<sup>2</sup>. The general form
+                        <code>mantissa e exponent</code>
+                    </li>
+                    <li><span>Character Constants: </span>A single character consant contain a single character enclosed
+                        with in pair of single quotes as shown below:</li>
+                    <code>'5', 'a', '*' , 'A' , ' ', ';' Note: '5'(Character) is not equal to 5(Number).</code>
+                    <li><span>String constants: </span> A string is a sequence of character enclosed with in pairs of double
+                        quotes. They should be alphabets, digits, special characters and blan space. as shown below:</li>
+                    <code>"Hello", "1234", "R", "5*3"</code>
+                </ol>
+                <h6 class="h2-head">Escape sequence Character</h6>
+                <p class="p-para">Java support special character that combination with backslash(\) provide specific meaning
+                    of the characters. <br /><code>Note: '\b' count as a single character.</code></p>
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>S.NO</th>
+                            <th>constant</th>
+                            <th>meaning</th>
+                        </tr>
+                    </thead>
+    
+                    <tr>
+                        <td>1</td>
+                        <td>'\b'</td>
+                        <td>back slash</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>'\f'</td>
+                        <td>form feed</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>'\n'</td>
+                        <td>new line</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>'\r'</td>
+                        <td>carriage return</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>'\t'</td>
+                        <td>horizonatal tab</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>' \' '</td>
+                        <td>Single quote</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>' \" '</td>
+                        <td>double quote</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>' \\ '</td>
+                        <td>backslash</td>
+                    </tr>
+                </table>
+                <!-- program -->
+                <div class="container">
+                    <pre class="contain">
+                        <code class="java-program">
+            public class First {
+                public static void main(String[] args) {
+                    System.out.println("Hello,\t course\nT\npoint!");
+            
+                }
+            }
+        </code>
+    </pre>
+                </div>
+                <pre class="output"><span>Output:</span> 
+                    Hello,   course
+                    T
+                    point!
+                </pre>
+            </div>
+            <div>
+                <h5 class="h2-head" id="b">Varibles In Java</h5>
+                <p class="p-para">In simple words Variable is a container that contain location used to store a data value.
+                    <br /> A Variable name can be choosen by the programmer is meaningful way so as to reflect what is
+                    represents in the program.
+                </p>
+                <code>average , height, simple_interest, _data</code>
+                <p class="p-para">There are some rules to declare a variable.</p>
+                <ul>
+                    <li>They must not start with a digit.</li>
+                    <li>Uppercase and Lowercase are distinct means variables name data and Data is are not same. That reason
+                        java is case-sensitive</li>
+                    <li>Variable should not be keyword.</li>
+                    <li>White space are not allowed. <code>simple interest(not Valid!)</code></li>
+                    <li>A variable name can consist of Capital letters A-Z, lowercase letters a-z digits 0-9, and two
+                        special characters such as _ underscore and $ dollar sign.</li>
+                    <li>No Length limit of a variable name.</li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="h2-head" id="c">DataTypes in Java</h5>
+                <p class="p-para">Every Variable in java has a Datatype. DataType is specify the size and value that can be
+                    stored in the variable. It should be an integer, boolean, character, floating point etc. Datatypes in
+                    java are catergories into two : Primitive(Build-in) and Non-Primitive(Derived/Reference Type).</p>
+                <img src="./java-img/datatype.jpg" alt="" class="img-fluid">
+                <ol type="i">
+                    <li><span>Primitive:</span>In this datatype only capability to store single value in a varible, their is
+                        no special capability.
+                        <ol>
+                            <li><span>Boolean DataType: </span>Boolean type is used when we want to test a particular
+                                condition during the execution of the program are only two values <code>true/false</code>
+                                that a boolean type.</li>
+                            <p class="output">Syntax: <code> boolean < variale_name ></variale_name></code></p>
+                            <li><span>Byte DataType: </span>The byte datatype is an 8-bit signed integer data type. It can
+                                store integer values ranging from -128 to 127.</li>
+                            <p class="output">Syntax: <code> byte < variale_name ></variale_name></code></p>
+                            <li><span>Short DataType: </span> The short datatype is a 16-bit signed integer data type. It
+                                can store integer values ranging from -32,768 to 32,767</li>
+                            <p class="output">Syntax: <code> short < variale_name ></variale_name></code></p>
+                            <li><span>Int DataType: </span> It is a 32-bit signed integer datatype. It can store integer
+                                values ranging from -2,147,483,648 to 2,147,483,647. This datatype is commonly used for
+                                storing integer values in programs.</li>
+                            <p class="output">Syntax: <code> int < variale_name ></variale_name></code></p>
+                            <li><span>Long DataType: </span> It is a 64-bit signed integer datatype. It can store integer
+                                values ranging from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807. The long
+                                datatype is used when the range of values of int is not sufficient.</li>
+                            <p class="output">Syntax: <code> long < variale_name ></variale_name></code></p>
+                            <li><span>Float DataType: </span> : It is a 32-bit single-precision floating-point datatype. It
+                                can store decimal values and has a range of approximately ±3.4E38 with up to 7 significant
+                                digits.</li>
+                            <p class="output">Syntax: <code> float < variale_name ></variale_name></code></p>
+                            <li><span>Double DataType: </span> It is a 64-bit double-precision floating-point datatype. It
+                                can store decimal values and has a range of approximately ±1.7E308 with up to 15 significant
+                                digits. double provides higher precision compared to float.</li>
+                            <p class="output">Syntax: <code> double < variale_name ></variale_name></code></p>
+                            <li><span>Char DataType: </span> In Java, the char datatype is used to represent a single
+                                16-bit(2 byte) Unicode character. It can store any character from the Unicode character set.
+                            </li>
+                            <p class="output">Syntax: <code> char < variale_name ></variale_name></code></p>
+                            <p class="p-para" style="color:red">Note: In Java Char take 2 byte because the char datatype is
+                                designed to represent Unicode characters. Compare to other languages like C/C++ use only
+                                ASCII characters, and to represent all ASCII characters in 8 bits is enough. But Java uses
+                                the Unicode system 8 bits is not enough to represent all characters so Java uses 2 bytes for
+                                characters</p>
+                        </ol>
+                    </li>
+                    <table class="table table-bordered table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Type</th>
+                                <th>Default value</th>
+                                <th>Size</th>
+                                <th>Range</th>
+                            </tr>
+                        </thead>
+    
+                        <tr>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>1bit (depend upon system)</td>
+                            <td>true,false</td>
+                        </tr>
+                        <tr>
+                            <td>byte</td>
+                            <td>0</td>
+                            <td>8-bit</td>
+                            <td>-128 to 127</td>
+                        </tr>
+                        <tr>
+                            <td>char</td>
+                            <td>\u0000</td>
+                            <td>16-bit</td>
+                            <td>0 to 255</td>
+                        </tr>
+                        <tr>
+                            <td>short</td>
+                            <td>0</td>
+                            <td>16-bit</td>
+                            <td>-32768 to 32767</td>
+                        </tr>
+                        <tr>
+                            <td>int</td>
+                            <td>0</td>
+                            <td>32-bit</td>
+                            <td>-2,147,483,648 to 2,147,483,647</td>
+                        </tr>
+                        <tr>
+                            <td>long</td>
+                            <td>0</td>
+                            <td>64-bit</td>
+                            <td>-9,223,372,036,854,775,808 to 9,223,036,854,775,807</td>
+                        </tr>
+                        <tr>
+                            <td>float</td>
+                            <td>0.0f</td>
+                            <td>32-bit</td>
+                            <td> ±3.4E38 with up to 7 significant digits</td>
+                        </tr>
+                        <tr>
+                            <td>double</td>
+                            <td>0.0d</td>
+                            <td>64-bit</td>
+                            <td>±1.7E308 with up to 15 significant digits</td>
+                        </tr>
+                    </table>
+                    <li><span>Non-Primitive DataType: </span>In Non-primitive datatype has special capability to store
+                        multiple value into a single variable that are called Non-primitive DataType.
+                        <ol>
+                            <li><span>String: </span> The String datatype is used to represent a sequence of characters.
+                                It's not a primitive datatype like int or char, but rather a class defined in the
+                                'java.lang' package. Strings in Java are immutable, meaning their values cannot be changed
+                                once they are created. </li>
+                            <li><span>Class: </span> User-defined types, they are blueprints for creating objects, and
+                                objects are instances of classes.</li>
+                            <li><span>Array: </span>Array is a collection of similar datatype stored into one variable.</li>
+                            <p class="p-para">We dicuss string, array , interface and class in study in detail next caming
+                                topics.</p>
+                        </ol>
+                    </li>
+                    <div class="container">
+                        <pre class="contain">
+                            <code class="java-program">
+     public class Main {
+        public static void main(String[] args) {
+            // Primitive datatypes
+                    int num1 = 10;
+                    double num2 = 3.14d;
+                    char letter = 'A';
+                    boolean isTrue = true;
+                    
+                    // Reference datatypes
+                    String name = "John";
+                    int[] numbers = {1, 2, 3, 4, 5};
+                }
+            }
+            </code>
+        </pre>
+                    </div>
+                </ol>
+            </div>
+            <div>
+                <h5 class="h2-head" id="d">Declaration of Variable</h5>
+                <p class="p-para">In Java, variables are the names of storage locations. After designing suitable variable
+                    names, we must declare them to the compiler.</p>
+                <ul>
+                    <li>It tells the compiler what the variable name is.</li>
+                    <li>It specifies what type of data the variable name is.</li>
+                    <li>The place of declaration decides the scope of the variable.</li>
+                    <p class="p-para">A variable must be declared before it is used in the program.</p>
+                    <code>datatype varName;</code>
+                    <p class="p-para">For ex: int count;</p>
+                    <p class="p-para">A simple method to giving the value or assign value to a varible. The Process of
+                        giving initial value to variable is known as initialization. <br />
+                        <code>int count = 0;</code>
+                    </p>
+                </ul>
+            </div>
+            <div>
+                <h5 class="h2-head" id="e">Scope of Variables</h5>
+                <p class="p-para">
+                    In Java, the scope of a variable defines where in the program the variable can be accessed or
+                    referenced. The scope of a variable is determined by where it is declared within the code. <br /> There
+                    are Three types of varible are shown below:
+                <ul>
+                    <li>Local Variable</li>
+                    <li>Instance Variable</li>
+                    <li>Static Variable</li>
+                </ul>
+                </p>
+                <h6 class="h2-head">Local Variable</h6>
+                <ul>
+                    <li>Local variables are declared within a method, constructor, or block.</li>
+                    <li>They exist only within the block in which they are declared and are accessible only from that block.
+                    </li>
+                    <li>They are not accessible from outside the block, including nested blocks within the same method.</li>
+                </ul>
+                <h6 class="h2-head">Instance Variable</h6>
+                <ul>
+                    <li>Instance variables are declared within a class but outside any method, constructor, or block.</li>
+                    <li>These variables are created when an object of the class is created and destroyed when the object is
+                        destroyed.</li>
+                    <li>They are associated with objects (instances) of the class, hence the name "instance variables."</li>
+                </ul>
+                <h6 class="h2-head">Static Variable</h6>
+                <ul>
+                    <li>It is similar to Instance variable but Static variables are declared using the static keyword within
+                        a class but outside any method, constructor, or block.</li>
+                    <li>They are shared among all instances of the class.</li>
+                    <li>They are associated with the class itself rather than with any specific instance of the class.</li>
+                </ul>
+                <p class="p-para">Program to demostrate the Local, Instance and static variable </p>
+                <div class="container">
+                    <pre class="contain">
+                        <code class="java-program">
+    public class Main {
+        static int y = 56;
+        public String name; // instance variable
+    
+        public Main() {
+            this.name = "Rohit Varshney";
+        }
+    
+        public static void main(String[] args) {
+    
+            // initializing Instance Variable
+            Main obj = new Main();
+            System.out.println("Instance variable name  = " + obj.name);
+    
+            // Declare a Local variable
+            int x = 5;
+            System.out.println("local variable x = " + x);
+    
+            if (x != 0) {
+                x = 7;
+                System.out.println("local variable x = " + x);
+            }
+            // no requirement to initializing a static Variable
+            System.out.println("Static variable y  = " + y);
+        }
+    }
+        </code>
+    </pre>
+                </div>
+    
+                <pre class="output"><span>Output:</span> 
+                    Instance variable name  = Rohit Varshney
+                    local variable x = 5
+                    local variable x = 7
+                    Static variable y  = 56
+                </pre>
+            </div>
+    
+            <div>
+                <h5 class="h2-head" id="f">Type Casting</h5>
+                <p class="p-para">In Java, TypeCasting is a process that convert one datatype to another using cast operator. We must cast the value to be stored by preceding it with the type name in parentheses. </p>
+                <code>Syntax : type var1 = (type) value;</code>
+                <h6 class="h2-head">Type of TypeCasting</h6>
+                <ol>
+                    <li><span>Widening TypeCasting: </span>Widening TypeCasting also called Implicit TypeCasting. In this type a lower datatype is transformed into higher datatype without cast operators(automatically). <br/> Syntax: <code> < large_data_type > varname = < value_of_Small_datatype>.</code></li>
+                    <code>byte -> short -> char -> int -> long -> float -> double</code>
+                    <div class="container">
+                        <pre class="contain">
+                            <code class="java-program">
+    public class Main {
+        public static void main(String[] args) {
+            int var_int=5;
+            double var_double = var_int; //(automatic type conversion int to double)
+            System.out.println(var_int);
+            System.out.println(var_double);
+        }
+    }
+            </code>
+        </pre>
+                    </div>
+                    <pre class="output"><span>Output:</span>
+                        5
+                        5.0
+                    </pre>
+                    <li><span>Narrow TypeCasting: </span>Narrowing TypeCasting also called Explicit TypeCasting. In this type a higher datatype is transformed into lower datatype by using cast operators (manually). <br/> Syntax: <code> < smaller_data_type > varname = (< Small_data_type>) larger_data_type_varname.</code></li>
+                    <code>double -> float -> long -> int -> char -> short -> byte</code>
+                    <div class="container">
+                        <pre class="contain">
+                            <code class="java-program">
+    public class Main {
+        public static void main(String[] args) {
+            double a = 5.23654;
+            int b = (int)a; // manually(Explicit typecasting)
+            System.out.println(a);
+            System.out.println(b);
+        }
+    }
+            </code>
+        </pre>
+                    </div>
+                    <pre class="output"><span>Output:</span>
+                        5.23654
+                        5                    
+                    </pre>
+                </ol>
+            </div>
+            <div class="btnn">
+                <div class="btn1">
+                    <a href="java_intro.html">Previous</a>
+                </div>
+                <div class="btn1">
+                    <a href="java_b.html">Next</a>
+                </div>
+            </div>
+    </div>
+</main>
+    <!-- Footer -->
+    <div id="footer_file"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        $("#header_file").load("../heads.html");
+        $("#footer_file").load("../footer.html");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor in Java</title>
+    <link rel="stylesheet" href="../style/style_a.css">
+    <link rel="stylesheet" href="./java_style.css">
+    <link rel="stylesheet" href="../style/card.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <div id="header_file"></div>
+
+    <!-- Main contain -->
+    <main>
+        <div class="px-5 py-5">
+            <div class="container" id="start">
+                <h2 class="h2-head">Constructor in Java</h2>
+            </div>
+            <div class="container">
+                <table>
+                    <th colspan="2">Table Of Content</th>
+                    <tr>
+                        <td>
+                            <ul class="ul-list">
+                                <li><a href="#a">Constructor in java</a></li>
+                                <li><a href="#b">Types of Java Constructor</a>
+                                <ul>
+                                    <li><a href="#c">Default Constructor</a></li>
+                                    <li><a href="#d">Parameterized Constructor</a></li>
+                                    <li><a href="#e">Copy Constructor</a></li>
+                                </ul>
+                                </li>
+                                <li><a href="#f">Constructor Overloading inb java</a></li>
+                                <li><a href="#g">Different Between Constructor and Method in Java</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+                <div>
+                    <h5 class="h2-head" id="a">Constructor in Java</h5>
+                    <p class="p-para">
+                        We know that uses the dot operator to access the instance variables and then assign values to them individually. It is tadious approch to initialize all the variables of all the objects. <br/>
+                        Java supports a special type of method, called a Constructor, that enables an object to initialize itself when it is created. <br/>
+                        Constructor have the same name as the class itself. Secondly, they do not specify a return type, not even void. This is because they return the instance of the class itself. <br/>
+                        let us consider <strong>Point</strong> class. and create a constructor method as shown below:
+                    </p>
+                    <div class="container">
+                        <pre class="contain">
+                            <code class="java-program">
+        // constructor in java
+        class Point{
+          // declare constructor
+          Point(){
+             System.out.println("Constructor call");
+            }
+            public static void main(String [] args){ 
+               Point obj = new Point(); //constructor call
+             }
+         }                    </code>
+                        </pre>
+                    </div>
+        <pre class="output"><span>Output: </span>Constructor call</pre>
+        <p class="p-para">In the above example demostrate constructor call when we create an object by default it call the constructor of that class.</p>
+                    <h5 class="h2-head">Rules for creating Java constructor.</h5>
+                    <p class="p-para">There are several rule to create constructor in java:</p>
+                    <ol>
+                       <li>The constructor name must be the same as the class name.</li>
+                       <li>Constructors do not have a return type, not even 'void'.</li>
+                       <li> If you don't explicitly define any constructors in your class, Java provides a default constructor with no arguments. However, if you define any constructor, including a parameterized one, Java does not provide the default constructor.</li>
+                       <li>You can define constructors with parameters to initialize instance variables with specific values.</li>
+                       <li>Like methods, constructors can be overloaded, meaning a class can have multiple constructors with different parameter lists.</li>
+                       <li> Constructors can call other constructors in the same class using the <code>this()</code> keyword. This is known as constructor chaining.</li>
+                       <li>Constructors are used to initialize the object's state by assigning initial values to its instance variables</li>
+                    </ol>
+                  
+        
+                    <div>
+                        <h5 class="h2-head" id="b">Types of Constructor</h5>
+                        <p class="p-para">
+                           There are Three types of constructor in java are mentioned below:
+                           <img src="./java-img/constructor.jpg" alt="" class="img-fluid">
+                        </p>
+                        <h6 class="h2-head" id="c">Default Constructor</h6>
+                        <p class="p-para"> If a class does not explicitly define any constructors, Java provides a default constructor with no arguments. This default constructor initializes instance variables to their default values.</p>
+                        <Strong>Syntax:
+                            <code >
+                                <pre class="syntax">
+            Class ClassName{
+                //default constructor
+                ClassName(){
+                    //code
+                }
+            }
+        </pre>
+        </code>
+                        </Strong>
+                        <div class="container">
+                            <pre class="contain">
+                                <code class="java-program">
+         class CTP{
+           CTP(){
+              System.out.println("default Constructor call");
+             }
+             public static void main(String [] args){ 
+                CTP obj = new CTP(); //constructor call
+              }
+          }                   </code>
+                            </pre>
+                        </div>
+                        <pre class="output"><Span>Output: </Span>Default constructor</pre>
+                        <h6 class="h2-head" id="d">Parameterized Constructor</h6>
+                        <p class="p-para">Parameterized Constructor is similiar to default constructor but parameter list is passed into the constructor method. <br>
+                        A parameterized constructor in Java is a constructor that accepts parameters. It allows you to initialize an object with specific values at the time of creation. 
+                        </p>
+                        <div class="container">
+                            <pre class="contain">
+                                <code class="java-program">
+        class Rectangle{
+            int length , width;
+           // parameterized Constructor
+            Rectangle(int length, int width){
+               this.length = length; 
+               this.width = width;
+              }
+             int rectArea(){
+                return length * width;
+                }
+             public static void main(String [] args){
+                Rectangle rect = new Rectangle(12,5); //constructor call
+                 int area = rect.rectArea();
+                 System.out.println("Area of Rectangle : " + area);
+               }
+           }                       </code>
+                            </pre>
+                        </div>
+                        <pre class="output"><Span>Output: </Span>Area of Rectangle : 60</pre>
+                        <h6 class="h2-head" id="e">Copy Constructor</h6>
+                        <p class="p-para">A copy constructor in Java is a special type of constructor that creates a new object by copying the value of another object of the same class. It allow you to create a copy of an existing object, ensuring that the new object has the same state as the original. <br>
+                        </p>
+                        <div class="container">
+                            <pre class="contain">
+                                <code class="java-program">
+        // Java Program for Copy Constructor
+        class CTP {
+        // data members of the class.
+           String name;
+           int age;
+        
+          // Parameterized Constructor
+             CTP(String name, int age)
+              {
+                  this.name = name;
+                  this.age = age;
+               }
+        
+             // Copy Constructor
+             CTP(CTP obj2)
+             {
+                  this.name = obj2.name;
+                  this.age = obj2.age;
+              }
+        }
+        class CopyConstrutor {
+           public static void main(String[] args)
+             {
+                  // invoke the parameterized constructor.
+                  CTP object1 = new CTP("Aditya", 22);
+                 System.out.println("\t Name :  " + object1.name+ " and Age : " +object1.age); 
+                 System.out.println("*******************************************");
+                 //  invoke the copy constructor.
+                CTP object2 = new CTP(object1);
+                System.out.println("\t Name : " + object2.name+ " and Age : " + object2.age);
+               }
+        }                                                   </code>
+                            </pre>
+                        </div>
+                        <pre class="output"><Span>Output: </Span>
+                Name : Aditya and Age : 22
+        *******************************************
+                Name : Aditya and Age : 22
+                        </pre>
+                    </div>
+        
+                    <div>
+                        <h5 class="h2-head" id="f">Constructor Overloading in Java</h5>
+                        <p class="p-para">Constructor Overloading is a approach in which more than one constructor have different parameter list and that perform different tasks. below example provide better understanding about constructor Overloading.</p>
+                        <div class="container">
+                            <pre class="contain">
+                                <code class="java-program">
+        class Main {
+            int value;
+           // Parameterized constructor with one integer parameter
+            Main(int value) {
+               this.value = value;
+           }
+        
+           // Parameterized constructor with two integer parameters
+            Main(int x, int y) {
+               this.value = x + y;
+           }
+        
+           // Parameterized constructor with a String parameter
+            Main(String str) {
+               this.value = Integer.parseInt(str);
+           }
+        
+           // Display method
+           public void display() {
+               System.out.println("Value: " + value);
+           }
+        
+           public static void main(String[] args) {
+               // Creating objects using different constructors
+               Main obj1 = new Main(10);   // Parameterized constructor with one parameter
+               Main obj2 = new Main(5, 7); //  with two parameters
+               Main obj3 = new Main("10032");  //  with a String parameter
+        
+               // Displaying values
+               obj1.display(); 
+               obj2.display(); 
+               obj3.display(); 
+           }
+        }</code>
+         </pre>
+                        </div>
+                        <pre class="output"><span>Output: </span>
+         Value: 10
+         Value: 12
+         Value: 10032
+                        </pre>
+                    </div>
+                    <div>
+                        <h5 class="h2-head" id="g">Difference Between Constructor and Methods in Java</h5>
+                        <table class="table table-bordered table-hover">
+                            <tr class="thead-dark">
+                                <th>Basis</th>
+                                <th>Java Constructor</th>
+                                <th>Java Method</th>
+                            </tr>
+                            <tr>
+                                <td>purpose</td>
+                                <td>Used for initializing object</td>
+                                <td>Define Behavior and action for object</td>
+                            </tr>
+                            <tr>
+                                <td>return value</td>
+                                <td>No return value(not even void)</td>
+                                <td>can return a value(or void if no return)</td>
+                            </tr>
+                            <tr>
+                                <td>name</td>
+                                <td>Same as the class name</td>
+                                <td>can have any valid name expect class name</td>
+                            </tr>
+                            <tr>
+                                <td>compiler</td>
+                                <td>Java compiler provide a default constructor. If you don't have any constructor in a class</td>
+                                <td>The method doesn't provide by the compiler in any case  </td>
+                            </tr>
+                            <tr>
+                                <td>Invocation</td>
+                                <td>The constructor invoked implicity</td>
+                                <td>The Method incoked explicitly</td>
+                            </tr>
+                        </table>
+                        
+                    </div>
+        
+                    <div class="btnn">
+                        <div class="btn1">
+                            <a href="java_e.html">Previous</a>
+                        </div>
+                        <div class="btn1">
+                            <a href="java_j.html">Next</a>
+                        </div>
+                    </div>
+            
+        </div>
+    </main>
+    <!-- Footer -->
+    <div id="footer_file"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        $("#header_file").load("../heads.html");
+        $("#footer_file").load("../footer.html");
+    </script>
+</body>
+
+</html>

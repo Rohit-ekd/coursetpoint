@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented Programming in Java</title>
+    <link rel="stylesheet" href="../style/style_a.css">
+    <link rel="stylesheet" href="./java_style.css">
+    <link rel="stylesheet" href="../style/card.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <div id="header_file"></div>
+
+    <!-- Main contain -->
+    <main>
+        <div class="px-5 py-5">
+            <div class="container" id="start">
+                <h2 class="h2-head">Object Oriented Programming Concepts</h2>
+            </div>
+            <div class="container">
+                <table>
+                    <th colspan="2">Table Of Content</th>
+                    <tr>
+                        <td>
+                            <ul class="ul-list">
+                                <li><a href="#a">What is OOPs?</a></li>
+                                <li><a href="#b">Benefits of OOPs</a></li>
+                                <li><a href="#c">Objects</a></li>
+                                <li><a href="#d">Classes</a></li>
+                                <li><a href="#e">Abstraction</a></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="ul-list">
+                                <li><a href="#f">Encapsulation</a></li>
+                                <li><a href="#g">Inheritance</a></li>
+                                <li><a href="#h">Polymorphism</a></li>
+                                <li><a href="#i">super Keyword</a></li>
+                                <li><a href="#j">this Keyword </a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div>
+                <h5 class="h2-head" id="a">What is OOPs</h5>
+                <p class="p-para">
+                    In the Introduction we known Java is OOP what why java is used the concepts of OOP? In this Article
+                    we are briefly understand the Concept OOPs. <br />
+                    Object Oriented Programming allows to decompose a problem into a number of entities called objects
+                    and
+                    then build data and function(methods in java) around these entities. Procedural programming is about
+                    writing procedures or methods that perform operations on the data, while object-oriented programming
+                    is
+                    about creating objects that contain both data and methods.
+                </p>
+
+                <h5 class="h2-head" id="b">Benefits</h5>
+                <ul>
+                    <li>OOP is easy and faster to execute.</li>
+                    <li>The principle of data hiding helps the programmer to build secure programs.</li>
+                    <li>OOP helps to keep the Java code DRY "Don't Repeat Yourself", means we can reuse the code when we
+                        use
+                        in previous program.</li>
+                    <li>Easy to maintain and debug.</li>
+                    <li>By the help of Oop it is easy to partition of complex project or large project based on Object.
+                    </li>
+                </ul>
+                <img src="./java-img/oop.jpg" alt="" class="img-fluid">
+                <h5 class="h2-head" id="c">Objects</h5>
+                <p class="p-para">Objects are basic runtime entities in an object-oriented system. These entities are
+                    represent by person, table, place, age. <br />An objects are the instance of a class that are
+                    created to
+                    use attributes and methods of a class. Objects are real world Entities. <br />When we create an
+                    object,
+                    which is non-primitive datatype, It's always allocated on the heap memory. </p>
+                <h6 class="h2-head">Characteristics of Objects</h6>
+                <ol>
+                    <li><span>State: </span> State represent the attributes of an Object. It shows the properties of an
+                        object.</li>
+                    <li><span>Behavior: </span>Behavior of an object provide a functionality perform by the object.</li>
+                    <li><span>Identity: </span>An object provide an unique Identity for an one object interact with
+                        other
+                        objects.</li>
+                </ol>
+                <strong>Delcare an object in java</strong>
+                <p class="p-para">If we are declare an object we can use of new operator. The new operator dynamically
+                    allocates(allocates at run time) memory for an object and returns a reference to it.</p>
+                <Strong>Syntax:
+                    <code>
+                            <pre class="syntax">
+                        class_name < obj > = new class_name();
+                            </pre>
+                        </code>
+                </Strong>
+                <h5 class="h2-head" id="d">Class</h5>
+                <p class="p-para">A Class is a set of Object or group of Object which shares common
+                    properties/characteristics. In simple words we define a class is a blue-print or prototype from
+                    which
+                    object are created. for example Car is a class while a particular car name BMW , Maruti suzuki, fort
+                    is
+                    an object.</p>
+                <img src="./java-img/class.jpg" alt="" class="img-fluid">
+                <h6>Properties of Class</h6>
+                <ul>
+                    <li>Classes are not real world entities.</li>
+                    <li>Class not occupy memory.</li>
+                    <li>A class is a container that contains
+                        <ul>
+                            <li>Data members</li>
+                            <li>Methods</li>
+                            <li>Construct</li>
+                            <li>Interface</li>
+                            <li>Nested classes</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h6>Class Declaration in Java</h6>
+                <strong>
+                    <code>
+                            <pre class="syntax">
+            < access_modifier > class < class_name >{
+                field declaration;
+                methods declaration;
+            }
+                            </pre>
+                        </code>
+                </strong>
+
+                <!-- program -->
+                <div class="container">
+                    <pre class="contain">
+                            <code class="java-program">
+        /*In the below program show the working of classes and objects in java.*/
+        class Rectangle{  // declaration of class
+            int length, width;
+            void getData(int length, int width){    //definition method
+              this.length=length;
+              this.width= width;
+             }
+             int display(){
+               return length*width;
+               }
+            }
+          
+          class Area{
+            public static void main(String[] args){
+               Rectangle obj = new Rectangle();             //creating objects
+               int area;
+               obj.getData(5,7);
+               area = obj.display();
+              System.out.println("Area of Rectangle : " + area);
+            }
+          }
+            </code>
+        </pre>
+                </div>
+                <pre class="output"><span>Output:</span> Area of Rectangle : 35 </pre>
+
+                <h5 class="h2-head">Difference Between Class and Object</h5>
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Java Class</th>
+                            <th>Java Object</th>
+                        </tr>
+                    </thead>
+
+                    <tr>
+                        <td>Class is a container that containe data member and method.</td>
+                        <td>Object is an instance of class.</td>
+                    </tr>
+                    <tr>
+                        <td>No memory is allocated when we declare a class.</td>
+                        <td>Memory is allocated when we create a object of the class.</td>
+                    </tr>
+                    <tr>
+                        <td>Class is not real world Entity.</td>
+                        <td>Where Object is a real world Entity.</td>
+                    </tr>
+                    <tr>
+                        <td>when we declare a class we can use <strong>class</strong> keyword.</td>
+                        <td>when we create a object we can use <strong>new</strong> keyword.</td>
+                    </tr>
+                    <tr>
+                        <td>For Example : Car is a Class</td>
+                        <td>BMW, Scorpio, Tesla are the instance of class(car).</td>
+                    </tr>
+
+                </table>
+                <h5 class="h2-head" id="e">Abstraction</h5>
+                <p class="p-para">Data Abstraction is refers to the act of representing essential features without
+                    including
+                    the background detail. In simple we can say that data Abstraction is a property in which only
+                    essential
+                    detail are displayed to the user. <br /> Consider a real life example a man driving a bike. The man
+                    only
+                    knows that give some raise will increase the speed of bike or applying brakes will stop the bike,
+                    but he
+                    does not know how on give raise, the speed of bike will increase and not known when he apply brake
+                    the
+                    bike will stop. He does not known about the internal mechanism of the bike. <br /> In Java,
+                    Abstraction
+                    is achieved by interface and abstract classes. we can achieve 100% abstraction using interface.</p>
+                <p style="color: red;">Abhi abstract classes and method raha gya hai.</p>
+                <!-- program -->
+
+                <h5 class="h2-head" id="f">Encapsulation</h5>
+                <p class="p-para">The Wrapping up of data and methods into single unit(class) is known as Encapsulation.
+                    The
+                    data is not accessible by the outside world and only those methods, which are wrapped in the class
+                    can
+                    access it. These methods provide the interface between the object's data and program. Encapsulation
+                    makes it possible for objects to treated like a "black box", each performing a specific task without
+                    knowing any internal implementation.</p>
+                <img src="./java-img/encapsulation.jpg" alt="" height="600" width="600">
+                <p class="p-para">Here's an example to illustrate data encapsulation in Java:</p>
+                <div class="container">
+                    <pre class="contain">
+                           <code class="java-program">
+        class Student {
+            // Private fields (attributes)
+            private String name;
+        
+            // Public methods to access and modify the private fields (getters and setters)
+        
+            // Getter for name
+            public String getName() {
+                return name;
+            }
+        
+            // Setter for name
+            public void setName(String name) {
+                // Perform validation, if required
+                this.name = name;
+            }
+        }
+        
+        class TestStudent {
+            public static void main(String[] args) {
+                // Create an object of Student class
+                Student student = new Student();
+        
+                // Set student details using setter methods
+                student.setName("Rohit");
+        
+                // Get and display student details using getter methods
+                System.out.println("Name : " + student.getName());
+            }
+        }                   
+        </code>
+        </pre>
+                </div>
+
+                <pre class="output"><span>Output:</span> Name : Rohit</pre>
+                <ul>
+                    <li>The fields 'name' are declared as private, meaning they cannot be accessed directly from outside
+                        the
+                        class.</li>
+                    <li>Public getter and setter methods are provided for each private field to access and modify their
+                        values.</li>
+                    <li>We can create 'student' object of the class Student.</li>
+                    <li>We set the student details using the setter methods.</li>
+                    <li>and display using getter method.</li>
+                </ul>
+                <h6>Advantages of Encapsulation</h6>
+                <ul>
+                    <li>Data-Hiding</li>
+                    <li>Code Reusability</li>
+                    <li>Increase Flexibility</li>
+                    <li>Enhanced Security</li>
+                    <li>Code Maintainability</li>
+                </ul>
+                <h6>Disadvantages of Encapsulation</h6>
+                <ul>
+                    <li>Increase Complexicity</li>
+                    <li>Difficult to understand</li>
+                    <li>Performance Overhead</li>
+                </ul>
+
+                <h5 class="h2-head" id="g">Inheritance</h5>
+                <p class="p-para">Inheritance in java is important feature of Object Oriented Programming that allow one
+                    class to used the feature of another class. Means feature of Base class Inherited by derived class
+                    using
+                    <code>extends</code> Keyword.
+                </p>
+                <ul>
+                    <li><span>Super class/ Parent class: </span>The class whose features are inherited is known as a
+                        superclass.</li>
+                    <li><span>Sub class/ Child class: </span>The class that inherits the other class is known as a
+                        subclass.
+                    </li>
+                    <li><span>Reusability: </span>When we inherited the property from base class to derived class help
+                        to
+                        code Reusable.</li>
+                </ul>
+                <strong>Syntax: To defining a subclass
+                    <code>
+                            <pre class="syntax">
+        class < subClassName > extends < superClassName >{
+            variables;
+            methods;
+        }
+                            </pre>
+                        </code>
+                </strong>
+                <p class="p-para">Here Program to illustrate the working of Inheritance.</p>
+                <!-- program -->
+                <div class="container">
+                    <pre class="contain">
+                    <code class="java-program">
+        // Base class declaration
+        class Parent{ 
+          String parName = "Base Class";
+          }
+        
+        // Derived class inhert from base class
+        class Child extends Parent{
+           String childName = "Derived Class";
+        }
+        
+        class Mains{
+          public static void main(String [] args){
+            Child c = new Child();
+            System.out.println("child name : " +  c.childName);
+            System.out.println("parent name : " +  c.parName);
+          }
+        }
+        </code>
+        </pre>
+                </div>
+                <pre class="output"><span>Output:</span> 
+                        child name : Derived Class
+                        parent name : Base Class                
+            </pre>
+                <h6 class="h2-head">Types of Inheritance</h6>
+                <img src="./java-img/inheritanca.jpg" alt="" class="img-fluid">
+                <ol>
+                    <li><span>Single Inheritance : </span> A derived class inherits only one superclass. Above image
+                        single
+                        inheritance shows class B Inherits from Class A.</li>
+                    <li><span>Multilevel Inheritance : </span>Maintain a chain when class C is inherits from B and class
+                        B
+                        inherits from class A.</li>
+                    <li><span>Multiple Inheritance(Using Interface) : </span> One subclass is inherits from more than
+                        one
+                        superclass, but Java does not support multiple Inheritance it achieved by using the concept
+                        Inheritance.</li>
+                    <li><span>Hierarchical Inheritance : </span> As the name suggest multiple subclasses are inherits
+                        from
+                        single superclass.</li>
+                    <li><span>Hybrid Inheritance : </span>It is mix of different type of Inheritance. Since Java doesn’t
+                        support multiple inheritances with classes, hybrid inheritance involving multiple inheritance is
+                        also not possible with classes. But using Interface is possible.</li>
+                </ol>
+                <h6>Important Point to Remember about Inheritance</h6>
+                <ul>
+                    <li>Access Modifiers: Inheritance respects access modifiers. If a superclass member is declared as
+                        <code>private</code> , it cannot be accessed directly by the subclass. However,
+                        <code>protected</code> and <code>public</code> members can be accessed by the subclass.
+                    </li>
+                    <li>Constructor Chaining: When a subclass is instantiated, the constructor of its superclass is
+                        invoked
+                        implicitly or explicitly using the <code>super()</code> keyword.</li>
+                    <li>Overriding: Subclasses can override superclass methods to provide a specific implementation
+                        using
+                        the <code>@Override</code> notation.</li>
+                </ul>
+                <h5 class="h2-head" id="h">Polymorphism</h5>
+                <p class="p-para">The word "polymorphism" is derived from Greek, where "poly" means many and "morph"
+                    means
+                    forms. Polymorphism refers to the ability of a single interface (method) to operate on different
+                    types
+                    of objects.</p>
+                <p class="p-para">Polymorphism is another important feature of OOP. Is an Operation may exhibit
+                    different
+                    behavior in different instances. The behavior depends upon the types of data used in the operation.
+                    For
+                    Example, consider a man has different responsibity on front of different person and place like man
+                    is
+                    employee of his company, same man is husband for his wife and same man is son for his mother same
+                    man
+                    take different responsibity in different places. This is called Polymorphism. </p>
+                <img src="./java-img/polymorphism.jpg" alt="" class="img-fluid">
+                <h6 class="h2-head">Types of Polymorphism</h6>
+                <ol>
+                    <li><span>Method Overloading : </span> Method Overloading is create methods that have same name, but
+                        different parameter lists and different definitions. This is called method Overloading.
+                        <br />Method
+                        overloading in Java is also known as Compile-time Polymorphism, Static Polymorphism, or Early
+                        binding. <br /> Method overloading is used when objects are required similar tasks but using
+                        different parameter list.</li>
+                    <div class="container">
+                        <pre class="contain">
+                        <code class="java-program">
+        class Addition{
+            int add(int a, int b){   // add method with two parameters.
+             return (a+b);
+           }
+           int add(int x, int y, int z){ // overload add method with three parameter.
+            return(x+y+z);
+           }
+         }
+         
+         class Sum{
+          public static void main(String [] args){
+            Addition sum = new Addition();
+            System.out.println(sum.add(15,20));
+            System.out.println(sum.add(12,15,3));
+            }
+         }  </code>
+            </pre>
+                    </div>
+                    <pre class="output"><span>Output:</span> 35   30</pre>
+                    <li><span>Method Overriding : </span>Method Overriding is create method that have same name and same
+                        parameter, method of subclass is inherits from the superclass. That means, we should override
+                        the
+                        method defined in the superclass. This is possible by defining same method in subclass. <br />
+                        Method overriding in Java is also known as Run-time Polymorphism, Dynamic Polymorphism, or Late
+                        binding. <br /> Method overriding is used to change the definition of the superclass method.
+                    </li>
+
+                </ol>
+                <div class="container">
+                    <pre class="contain">
+                            <code class="java-program">
+                                //superclass parent
+        class Parent{
+          void display(){
+                System.out.println("Parent class");
+           } 
+        }
+        // Subclass1 inheriting from Parent
+        class Child1 extends Parent{
+          @Override   // override the display() method of parent class
+          void display(){
+                System.out.println("Child1 class");
+          }
+        }
+        // Subclass2 inheriting from Parent
+        class Child2 extends Parent{
+          @Override // override the display() method of parent class
+          void display(){
+                System.out.println("Child2 class");
+          }
+        }
+        class Overrides{
+         public static void main(String [] args){
+           Parent obj ; //create an object of parent class
+          obj= new Child1();
+          obj.display();
+          obj= new Child2();
+            obj.display();
+           }
+        }
+                            </code>
+                        </pre>
+                </div>
+                <pre class="output"><span>Output:</span>
+            Child1 class
+            Child2 class
+        </pre>
+                <h6 class="h2-head">Difference Between Method Overloading and Method Overriding</h6>
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Method Overloading</th>
+                            <th>Method Overriding</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Multiple methods in the same class with the same name but different parameters (signature).
+                        </td>
+                        <td>A subclass provides a specific implementation of a method that is already defined in its
+                            superclass.</td>
+                    </tr>
+                    <tr>
+                        <td>Inheritance is not Involved.</td>
+                        <td>Inheritance is Involved.</td>
+                    </tr>
+                    <tr>
+                        <td>Also called Static binding.</td>
+                        <td>Also called Dynamic binding.</td>
+                    </tr>
+                    <tr>
+                        <td>Same method name with different parameter lists.</td>
+                        <td>Same method name with the '@Override' annotation in the subclass.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>It is Compile-time polymorphism that call resolve by the compiler.</td>
+                        <td>It is Run-time polymorphism that not call resolve by the compiler. </td>
+                    </tr>
+                    <tr>
+                        <td>It is faster execution due to compile time polymorphism</td>
+                        <td>It takes more time to execution due to run-time polymorphism</td>
+                    </tr>
+                </table>
+
+                <h5 class="h2-head" id="i">Super keyword</h5>
+                <p class="p-para">
+                    In Java, the <strong>super</strong> keyword is a reference variable that is used to refer to the
+                    immediate parent class object. <br />It is used to call superclass methods, and to access the
+                    superclass
+                    constructor. <br />You can use the super keyword to access the members (methods, variables, and
+                    constructors) of the superclass from the subclass.
+                </p>
+                <h6 class="h2-head">1. Invoking Parent Class Variable : </h6>
+                <p class="p-para">In the below program both the base class and derived class have a member height. We
+                    could
+                    access the height of the base class in derived class using super keyword.</p>
+                <div class="container">
+                    <pre class="contain">
+                <code class="java-program">
+        // base class 
+        class Parent{
+           int height = 46;
+           }
+        //derived class
+        class Child extends Parent{
+           int height = 30;
+           void display(){
+            // print height of base class (Parent)
+             System.out.println("Height : " + super.height);
+            }
+         }
+        
+        class MainClass{
+          public static void main(String [] args){
+             Child obj = new Child();
+             obj.display();
+           }
+        }
+                           </code>
+            </pre>
+                </div>
+                <pre class="output"><span>Output:</span>Height : 46</pre>
+                <h6 class="h2-head">2. Invoking Parent Class Method:</h6>
+                <p class="p-para">
+                    In the below program, we have seen that if we only call method display() of child class then, the
+                    display() is invoked but with the use of the super keyword, display() of parent class could also be
+                    invoked.
+                </p>
+                <div class="container">
+                    <pre class="contain">
+                <code class="java-program">
+        // base class 
+        class Parent{
+           void display(){
+               System.out.println("I'm Parent Class display() method");
+              }
+           }
+        //derived class
+        class Child extends Parent{
+           void display(){
+                // Calling the display method of the Parent class
+               super.display(); 
+               System.out.println("I'm Child Class display() method");
+              }
+         }
+        
+        class MainClass{
+          public static void main(String [] args){
+             Child obj = new Child();
+             obj.display();
+           }
+        }
+                              </code>
+            </pre>
+                </div>
+                <pre class="output"><span>Output:</span> 
+        I'm Parent Class display() method
+        I'm Child Class display() method
+                    </pre>
+            </div>
+            <div>
+                <h6 class="h2-head">3. Invoking Parent class using Constructor. </h6>
+                <p class="p-para">In the below program, we have called the superclass constructor using the keyword
+                    ‘super’
+                    via subclass constructor.</p>
+                <div class="container">
+                    <pre class="contain">
+                            <code class="java-program">
+        // base class 
+        class Person{
+            public Person(){
+                System.out.println("Default Constructor of Person class.");
+           }
+        }
+        //derived class
+        class Employee extends Person{
+                 public Employee(){
+                // Calling the constructor of the Person class
+               super(); 
+               System.out.println("Default Constructor of Employee class.");
+              }
+         }
+        
+        class MainClass{
+          public static void main(String [] args){
+             Employee obj = new Employee(); // constructor call
+           }
+        }                      
+                            </code>
+                        </pre>
+                </div>
+                <pre class="output"><span>Output:</span>
+        Default Constructor of Person class.
+        Default Constructor of Employee class.          
+                    </pre>
+                <h5 class="h2-head" id="j">This Keyword in Java</h5>
+                <p class="p-para">
+                    The <strong>this</strong> keyword refers to the current object in a method or constructor. <br />
+                    In Java, the this keyword is a reference variable that refers to the current object within an
+                    instance
+                    method or constructor. It can be used to access instance variables, instance methods, and
+                    constructors
+                    of the current object.
+                </p>
+                <div class="container">
+                    <pre class="contain">
+                            <code class="java-program">
+        class Person{
+            String name;
+            int id;
+            // constructor
+            Person(String name, int id){
+                this.name =name;
+                this.id = id;
+               }
+             void getName(){
+                System.out.println("Your Name : " + name);
+             }
+             void getId(){
+              System.out.println("Your Id : " + id);
+            } 
+            public static void main(String [] args){
+              Person obj = new Person("Rohit",1009); // constructor call
+              obj.getName();
+              obj.getId();
+            }
+         }                   
+                            </code>
+                        </pre>
+                </div>
+                <pre class="output"><span>Output:</span>
+        Your Name : Rohit
+        Your Id : 1009
+        </pre>
+                <h6 class="h2-head">Method to use This keyword</h6>
+                <ul>
+                    <li>The ‘this’ keyword to refer to current class instance variables.</li>
+                    <li>The ‘this’ keyword to Accessing Instance Variables.</li>
+                    <li>The ‘this’ keyword Invoking Current Class Method.</li>
+                    <li>The ‘this’ keyword Returning Current Class Instance.</li>
+                    <li>The ‘this’ keyword Passing Current Class Instance.</li>
+                </ul>
+
+                <div class="btnn">
+                    <div class="btn1">
+                        <a href="java_e.html">Previous</a>
+                    </div>
+                    <div class="btn1">
+                        <a href="java_g.html">Next</a>
+                    </div>
+                </div>
+    </div>
+    </main>
+    <!-- Footer -->
+    <div id="footer_file"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        $("#header_file").load("../heads.html");
+        $("#footer_file").load("../footer.html");
+    </script>
+</body>
+
+</html>

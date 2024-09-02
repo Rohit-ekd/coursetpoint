@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java AWT</title>
+    <link rel="stylesheet" href="../style/style_a.css">
+    <link rel="stylesheet" href="./java_style.css">
+    <link rel="stylesheet" href="../style/card.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <div id="header_file"></div>
+
+    <!-- Main contain -->
+<main>
+    <div class="px-5 py-5">
+        <div class="container" id="start">
+            <h2 class="h2-head">Basics of Java AWT</h2>
+        </div>
+        <div class="container">
+            <table>
+                <th colspan="2">Table Of Content</th>
+                <tr>
+                    <td>
+                        <ul class="ul-list">
+                            <li><a href="#a">About AWT</a></li>
+                            <li><a href="#b">Java AWT Hierarchy</a></li>
+                            <li><a href="#c">Types of Container</a></li>
+                            <li><a href="#d">AWT packages in Java</a></li>
+                            <li><a href="#e">AWT Example</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h5 class="h2-head" id="a">About AWT</h5>
+            <p class="p-para">AWT(Abstract Window Toolkit) is an Application programming Interface used to develop GUI(Graphical User Interface) or Window based application in Java.</p>
+            <p class="p-para">Java AWT Components are platform dependent that is components are displayed according to view of Operating System. </p>
+            <p class="p-para">AWT is heavyweight, which means that its components consume resources from the underlying operating system (OS).</p>
+        </div>
+        <div>
+            <h5 class="h2-head" id="b">Java AWT Hierarchy</h5>
+            <p class="p-para">The Hierarchy of Java AWT Classes are given below.</p>
+            <img src="./java-img/awt.jpg" alt="" class="img-fluid">
+            <ul>
+                <li><span>Components:</span> AWT provides a set of core GUI components such as buttons, labels, text fields, checkboxes, radio buttons, lists, menus, and more. </li>
+                <li><span>Containers: </span>AWT provides containers like panels, frames, and dialogues to organize and group components in the Application.</li>
+                <li><span>Layout Managers: </span> AWT provide Layout managers handle the sizing and positioning of components based on various rules and constraints.</li>
+                <li><span>Event Handling: </span>AWT supports event-driven programming, that allow developers to respond to user interactions such as mouse clicks, key presses, and window events.</li>
+                <li><span>Graphics and Drawing : </span>AWT provides classes for rendering graphics and performing to draw shapes, write text in the component of java Application. </li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="h2-head" id="c">Types of Container in Java AWT</h5>
+            <p class="p-para">There are four types of container in java awt:</p>
+            <ol>
+                <li><span>Window : </span> Window is a top-level container that represents a window on the screen. It can have a title bar, border, and menu bar.</li>
+                <li><span>Frame : </span> It is a subclass of window and has a title bar, menu bar, border, and resizing corners. If you create a frame object from within a applet, it will contain warning message, such as "java applet window", to the user applet window has been created.</li>
+                <li><span>Dialog : </span> Dialogs is a temporary box that are typically used for displaying messages, getting user input, or performing actions that require user interaction.</li>
+                <li><span>Panel : </span> Panel is the superclass for applet. When screen output is directed to an applet, it is drawn on the surface of a panel object. A Panel is a window that does not contain a title bar, menu bar, or border.</li>
+            </ol>
+        </div>
+        <div>
+            <h5 class="h2-head" id="d">AWT packages in Java</h5>
+    
+            <pre class="syntax">
+    java.lang.Object
+    │
+    └── java.awt.Component
+        │
+        ├── java.awt.Container
+        │   │
+        │   ├── java.awt.Window
+        │   │   │
+        │   │   └── java.awt.Frame
+        │   │   │
+        │   │   └── java.awt.Dialog
+        │   │       │
+        │   │       └── java.awt.FileDialog
+        │   │
+        │   ├── java.awt.Panel
+        │   ├── java.awt.ScrollPane
+        │   ├── java.awt.Scrollbar
+        │   ├── java.awt.TextField
+        │   ├── java.awt.TextArea
+        │   ├── java.awt.Button
+        │   ├── java.awt.Label
+        │   ├── java.awt.Checkbox
+        │   ├── java.awt.CheckboxGroup
+        │   ├── java.awt.CheckboxMenuItem
+        │   ├── java.awt.Choice
+        │   ├── java.awt.List
+        │   ├── java.awt.MenuComponent
+        │   │   │
+        │   │   ├── java.awt.Menu
+        │   │   │   │
+        │   │   │   └── java.awt.PopupMenu
+        │   │   │
+        │   │   ├── java.awt.MenuItem
+        │   │   │   │
+        │   │   │   └── java.awt.MenuShortcut
+        │   │   │
+        │   │   └── java.awt.MenuBar
+        │   │
+        │   └── java.awt.Canvas
+        │
+        └── java.awt.Graphics
+            </pre>
+            <br/>
+        </div>
+        <div>
+            <h5 class="h2-head" id="e">Java AWT Example</h5>
+            <p class="p-para">Now let's see the simple Example of AWT where we inherit Frame class and show the Label component on the Frame.</p>
+            <strong>Example1:</strong>
+            <div class="container">
+                <pre class="contain">
+                    <code class="java-program">
+    import java.awt.*;
+    
+    public class HelloAWT extends Frame {
+        Label l;
+        public HelloAWT() {
+            // Set the title of the frame
+            setTitle("Hello World  AWT Example");
+    
+            // Set the size of the frame
+            setSize(500, 500);
+    
+            // Create a label with the text "Hello, World!"
+            l = new Label("Hello, World!");
+    
+            //set bound from top,right, bottom ,left
+            l.setBounds(150,100,250,20);
+    
+            // Add the label to the frame
+            add(l);
+    
+            // Set layout to BorderLayout (default for Frame)
+            setLayout(null);
+    
+            // Set the frame to be visible
+            setVisible(true);
+        }
+    
+        public static void main(String[] args) {
+            // Create an instance of the HelloAWT class
+            HelloAWT obj = new HelloAWT();
+        }
+    }                </code>
+                </pre>
+            </div>
+            <strong>Output: </strong><br/>
+    
+            <img src="./java-img/hello awt.png" alt="" class="img-fluid">
+            <p class="p-para">In this below example we are showing button component of the Frame.</p>
+            <div class="container">
+                <pre class="contain">
+                    <code class="java-program">
+    // create button using java awt
+    
+    import java.awt.*;
+    public class AwtExample extends Frame{
+     AwtExample(){
+      Button b = new Button("Click me!");
+      b.setBounds(30,80,60,30);
+      add(b);
+      setSize(300,300);
+      setLayout(null);
+      setTitle("Button awt Example");
+      setVisible(true);
+     }
+     public static void main(String [] args){
+       AwtExample obj = new AwtExample(); 
+     }
+    }               </code>
+                </pre>
+            </div>
+            <strong>Output: </strong><br/>
+            <img src="./java-img/click.png" alt="" class="img-fluid">
+            <p style="color:red;">
+                <Strong class="syntax">Note : when you close java awt window press ctrl+c in cmd.</Strong>
+            </p>
+        </div>
+    
+                <div class="btnn">
+                    <div class="btn1">
+                        <a href="java_i.html">Previous</a>
+                    </div>
+                    <div class="btn1">
+                        <a href="java_k.html">Next</a>
+                    </div>
+                </div>
+    </div>
+</main>
+    <!-- Footer -->
+    <div id="footer_file"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        $("#header_file").load("../heads.html");
+        $("#footer_file").load("../footer.html");
+    </script>
+</body>
+
+</html>

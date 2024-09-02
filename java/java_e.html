@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Modifier in Java</title>
+    <link rel="stylesheet" href="../style/style_a.css">
+    <link rel="stylesheet" href="./java_style.css">
+    <link rel="stylesheet" href="../style/card.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <div id="header_file"></div>
+
+    <!-- Main contain -->
+    <main>
+        <div class="px-5 py-5">
+            <div class="container" id="start">
+                <h2 class="h2-head">Access Modifier</h2>
+            </div>
+            <div class="container">
+                <table>
+                    <th colspan="2">Table Of Content</th>
+                    <tr>
+                        <td>
+                            <ul class="ul-list">
+                                <li><a href="#a">About Access Modifier</a></li>
+                                <li><a href="#b">Default</a></li>
+                                <li><a href="#c">Public</a></li>
+                                <li><a href="#d">Private</a></li>
+                                <li><a href="#e">Protected</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div>
+                <h5 class="h2-head" id="a">Access Modifier in Java</h5>
+                <p class="p-para">In Java, Access modifier help to provide security and accessibility of classes,
+                    variables, methods, and constructors. They control access level that other classes and pakages.
+                    Access modifier restrict the scope of class, constructor, variable, method.</p>
+                <img src="./java-img/accessmodifiers.jpg" alt="types of access modifier" class="img-fluid">
+                <h5 class="h2-head" id="b">Default Access Modifier</h5>
+                <p class="p-para">There is no access modifier is specified, it is considered as default. Default members
+                    are accessible within the same class and package.
+                    <br />
+                    program to illustrate the working of default access modifier.
+                    <br />
+                    In this program we have create a package name MyPackages and class Display try to access method from
+                    the package using default access modifier.
+                </p>
+                <div class="container">
+                    <pre class="contain">
+                            <code class="java-program">
+package MyPackages;
+
+// This class has default access modifier 
+class Display
+{ 
+    void show() 
+    { 
+        System.out.println("Hello Java!"); 
+    } 
+} 
+                            </code>
+                        </pre>
+                </div>
+
+                <div class="container">
+                    <pre class="contain">
+                            <code class="java-program">
+ /*  program to illustrate error while using
+ class from different package with default modifier */
+ import MyPackages.Display; 
+                         
+ class NewClass 
+ { 
+     public static void main(String args[]) 
+     { 
+         // Accessing class Display from package MyPackage
+         Display obj = new Display(); 
+         obj.show(); 
+     } 
+ } 
+                            </code>
+                        </pre>
+                </div>
+                <pre class="output"><span>Output:</span>
+            NewClass.java:3: error: Display is not public in MyPackages; 
+            cannot be accessed from outside package
+            import MyPackages.Display;
+                             ^ 
+        </pre>
+            </div>
+            <div>
+                <h5 class="h2-head" id="c">Public access Modifier</h5>
+                <p class="p-para">We can decalare public access modifier using keyword "public". If we can declare any
+                    method, class, data members as public it can access everywhere in program. Thier is no restriction
+                    of the scope.</p>
+                <p class="p-para">Program to demonstrate the working of Public access modifier. consider same example we
+                    use in default access modifier but litle change class and method declare as public.</p>
+                <div class="container">
+                    <pre class="contain">
+                    <code class="java-program">
+ package MyPackages;
+ 
+ // This class has public access modifier 
+ public class Display
+ { 
+     public void show() 
+     { 
+         System.out.println("Hello Java!"); 
+     } 
+ } 
+             </code>
+                </pre>
+                </div>
+                <div class="container">
+                    <pre class="contain">
+                <code class="java-program">
+import MyPackages.Display; 
+ 
+class NewClass 
+{ 
+    public static void main(String args[]) 
+    { 
+        // Accessing class Display from package MyPackage
+        Display obj = new Display(); 
+        obj.show(); 
+    } 
+} 
+                </code>
+            </pre>
+                </div>
+                <pre class="output"><span>Output: </span>Hello Java!</pre>
+            </div>
+            <div>
+                <h5 class="h2-head" id="d">Private Access Modifier</h5>
+                <p class="p-para">The Private access modifier is declare using the keyword "private". The Method, data
+                    member declare as private it accessible only within the class. Mean it is not accessible outside the
+                    class and package.</p>
+                <p class="p-para">Program to show declare a private method in a class they did not accessible outside
+                    the class. </p>
+                <div class="container">
+                    <pre class="contain">
+                    <code class="java-program">
+class A{
+    private void display(){
+       System.out.println("Private Access Modifier");
+       }
+    public void show(){
+        System.out.println("Public Access Modifier");
+      }
+   }
+ class B {
+public static void main(String [] args){
+  A obj = new A();
+  obj.show();
+  obj.display();
+ }
+}
+                    </code>
+                </pre>
+                </div>
+                <pre class="output"><span>Output: </span>
+        B.java:13: error: display() has private access in A
+        obj.display();
+            ^
+            1 error
+            </pre>
+            </div>
+            <div>
+                <h5 class="h2-head" id="e">Protected Access Modifier</h5>
+                <p class="p-para">The Protected access modifier is declare using the keyword "protected". The method ,
+                    data member declare as protected are accessible within the same package, same class and different
+                    package subclass.</p>
+                <p class="p-para">Program to demonstrate protected access modifier. Consider a package MyPackage and
+                    Class A in MyPackage is made public, to access by the class B. The method show in class A is
+                    protected and class B is inherited from class A and this protected method is then accessed by
+                    creating an object in class B.</p>
+                <div class="container">
+                    <pre class="contain">
+                    <code class="java-program">
+package MyPackages;
+
+public class A
+{ 
+    protected void show()  // method show() declare as Protected
+    { 
+        System.out.println("Welcome in courseTpoint!"); 
+    } 
+} 
+                    </code>
+                </pre>
+                </div>
+                <div class="container">
+                    <pre class="contain">
+                    <code class="java-program">
+import MyPackages.*; 
+class B extends A // class B is Subclass of A
+{ 
+    public static void main(String args[]) 
+    { 
+        B obj = new B(); 
+        obj.show(); 
+    } 
+} 
+                    </code>
+                </pre>
+                </div>
+                <pre class="output"><span>Output: </span>Welcome in courseTpoint!</pre>
+            </div>
+            <!-- previous and next button -->
+            <div class="btnn">
+                <div class="btn1">
+                    <a href="java_d.html">Previous</a>
+                </div>
+                <div class="btn1">
+                    <a href="java_f.html">Next</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <div id="footer_file"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        $("#header_file").load("../heads.html");
+        $("#footer_file").load("../footer.html");
+    </script>
+</body>
+
+</html>

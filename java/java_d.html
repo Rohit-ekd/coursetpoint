@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array in java</title>
+    <link rel="stylesheet" href="../style/style_a.css">
+    <link rel="stylesheet" href="./java_style.css">
+    <link rel="stylesheet" href="../style/card.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <div id="header_file"></div>
+
+    <!-- Main contain -->
+    <main>
+        <div class="px-5 py-5">
+            <div class="container" id="start">
+                <h2 class="h2-head">Array in Java</h2>
+            </div>
+            <div class="container">
+                <table>
+                    <th colspan="2">Table Of Content</th>
+                    <tr>
+                        <td>
+                            <ul class="ul-list">
+                                <li><a href="#a">Introduction to Array</a></li>
+                                <li><a href="#b">Creat</a></li>
+                                <li><a href="#c">DataTypes</a></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="ul-list">
+                                <li><a href="#d">Declaration of Variable</a></li>
+                                <li><a href="#e">Scope of Variable</a></li>
+                                <li><a href="#f">Type Casting</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h5 class="h2-head" id="a">Introduction to Array</h5>
+                <p class="p-para">
+                    In Java, Array is collection of similar type of element that is stored into single varible at
+                    contiguous memory location. In simple array refers to group of contiguous or related data items that
+                    share a common name.
+                <ul>
+                    <li>In java array are dynamically allocated.</li>
+                    <li>A specific element in an array is accessed by its index.</li>
+                    <li>Array has consecutive memory location.</li>
+                    <li>In Java array is an object.</li>
+                </ul>
+                <img src="./java-img/array.jpg" alt="" class="img-fluid">
+                </p>
+
+                <h5 class="h2-head">Types of Array</h5>
+                <p class="p-para">In Java Array are classified into two Types:
+                <ol>
+                    <li>One Dimentional Array</li>
+                    <li>Multidimentional Array</li>
+                </ol>
+                </p>
+                <h6 class="h2-head">One Dimentional Array</h6>
+                <p class="p-para">A list of items can be given one variable name using only one subscript such a
+                    variable called single-subscripted variable or One Dimentional Array. </p>
+                <p class="p-para">Syntax to declare an Array</p>
+                <code>
+                        <pre class="syntax">
+        data_type arr_name[];
+        Or
+        data_type[] arr_name;
+                        </pre>
+                    </code>
+                <p class="p-para"><strong>Instantiating an Array in Java</strong></p>
+                <code>
+                        <pre class="syntax">
+        int arr_name[] = new int[size];
+                        </pre>
+                    </code>
+                <h5 class="h2-head">Creating an array</h5>
+                <p class="p-para">Like any other variable, arrays must be declared and created in the computer memory
+                    before they used. Creating of an array involves three steps:</p>
+                <ul>
+                    <li>Declaring the array</li>
+                    <li>creating memory location</li>
+                    <li>Putting values into memory location</li>
+                </ul>
+                <!-- program -->
+                <div class="container">
+                    <pre class="contain">
+                            <code class="java-program">
+        class Array  
+        {  
+            public static void main(String[] args) 
+            { 
+               int arr[] = new int[5];
+               arr[0]=3;
+               arr[1]=2;
+               arr[2]=9;
+               arr[3]=8;
+               arr[4] = 12; 
+               for (int i=0 ; i < 5 ; i++){
+                    System.out.printf("arr [%d] = %d\n",i,arr[i]);
+               }
+            } 
+        }
+            </code>
+        </pre>
+                </div>
+                <pre class="output"><span>Output:</span> 
+        arr [0] = 3
+        arr [1] = 2
+        arr [2] = 9
+        arr [3] = 8
+        arr [4] = 12
+                    </pre>
+
+                <h5 class="h2-head">Array Length</h5>
+                <p class="p-para">In Java, all arrays store the allocated size in a variable named length. We can obtain
+                    the length of the above array <code>arr.length</code>. <br /> This information will used to
+                    manipulation of array where we not known the size of an array.</p>
+                <div class="container">
+                    <pre class="contain">
+                <code class="java-program">
+        class Array
+        {  
+            public static void main(String[] args) 
+            { 
+               int arr[] = new int[5];
+               arr[0]=3;
+               arr[1]=2;
+               arr[2]=9;
+               arr[3]=8;
+               arr[4] = 12; 
+               for (int i=0 ; i < arr.length ; i++){
+                    System.out.printf("arr [%d] = %d\n",i,arr[i]);
+               }
+            } 
+        }
+                </code>
+            </pre>
+                </div>
+                <pre class="output"><span>Output: </span>
+            arr [0] = 3
+            arr [1] = 2
+            arr [2] = 9
+            arr [3] = 8
+            arr [4] = 12
+        </pre>
+            </div>
+
+            <div>
+                <h5 class="h2-head" id="b">Two Dimentional Array </h5>
+                <p class="p-para">
+                    As we know about single Dimentional array, array in the form of list that indexed from zero to its
+                    maximum size minus 1. Two Dimentional array is in the form of matrix the first index is selects as a
+                    row and the second index selects the column with that row as shown in figure.
+                </p>
+                <img src="./java-img/2-d array.jpg" alt="" class="img-fluid">
+                <p class="p-para"><strong>Declare 2-D Array</strong></p>
+                <code>
+                        <pre class="syntax">
+                            data_type arr_name[][];
+                            Or
+                            data_type [][]arr_name;
+                        </pre>
+                    </code>
+                <div class="container">
+                    <pre class="contain">
+                        <code class="java-program">
+        class Array  
+        {  
+            public static void main(String[] args) 
+            { 
+                int arr[][] = {{0,1,2},{3,4,5},{6,7,8}};
+                for (int i=0 ; i < 3 ; i++){
+                    for(int j =0; j < 3; j++ ){
+                      System.out.print(arr[i][j] + " ");
+                    }
+                   System.out.println("");
+               }
+            } 
+        }
+                        </code>
+                    </pre>
+                </div>
+                <pre class="output"><span>Output: </span>
+            0 1 2
+            3 4 5
+            6 7 8
+        </pre>
+            </div>
+            <div>
+                <h5 class="h2-head" id="c">DataTypes in Java</h5>
+                <p class="p-para">Every Variable in java has a Datatype. DataType is specify the size and value that can
+                    be
+                    stored in the variable. It should be an integer, boolean, character, floating point etc. Datatypes
+                    in
+                    java are catergories into two : Primitive(Build-in) and Non-Primitive(Derived/Reference Type).</p>
+                <img src="./java-img/datatype.jpg" alt="" class="img-fluid">
+                <ol type="i">
+                    <li><span>Primitive:</span>In this datatype only capability to store single value in a varible,
+                        their is
+                        no special capability.
+                        <ol>
+                            <li><span>Boolean DataType: </span>Boolean type is used when we want to test a particular
+                                condition during the execution of the program are only two values
+                                <code>true/false</code>
+                                that a boolean type.</li>
+                            <p class="output">Syntax: <code> boolean < variale_name ></variale_name></code></p>
+                            <li><span>Byte DataType: </span>The byte datatype is an 8-bit signed integer data type. It
+                                can
+                                store integer values ranging from -128 to 127.</li>
+                            <p class="output">Syntax: <code> byte < variale_name ></variale_name></code></p>
+                            <li><span>Short DataType: </span> The short datatype is a 16-bit signed integer data type.
+                                It
+                                can store integer values ranging from -32,768 to 32,767</li>
+                            <p class="output">Syntax: <code> short < variale_name ></variale_name></code></p>
+                            <li><span>Int DataType: </span> It is a 32-bit signed integer datatype. It can store integer
+                                values ranging from -2,147,483,648 to 2,147,483,647. This datatype is commonly used for
+                                storing integer values in programs.</li>
+                            <p class="output">Syntax: <code> int < variale_name ></variale_name></code></p>
+                            <li><span>Long DataType: </span> It is a 64-bit signed integer datatype. It can store
+                                integer
+                                values ranging from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807. The long
+                                datatype is used when the range of values of int is not sufficient.</li>
+                            <p class="output">Syntax: <code> long < variale_name ></variale_name></code></p>
+                            <li><span>Float DataType: </span> : It is a 32-bit single-precision floating-point datatype.
+                                It
+                                can store decimal values and has a range of approximately ±3.4E38 with up to 7
+                                significant
+                                digits.</li>
+                            <p class="output">Syntax: <code> float < variale_name ></variale_name></code></p>
+                            <li><span>Double DataType: </span> It is a 64-bit double-precision floating-point datatype.
+                                It
+                                can store decimal values and has a range of approximately ±1.7E308 with up to 15
+                                significant
+                                digits. double provides higher precision compared to float.</li>
+                            <p class="output">Syntax: <code> double < variale_name ></variale_name></code></p>
+                            <li><span>Char DataType: </span> In Java, the char datatype is used to represent a single
+                                16-bit(2 byte) Unicode character. It can store any character from the Unicode character
+                                set.
+                            </li>
+                            <p class="output">Syntax: <code> char < variale_name ></variale_name></code></p>
+                            <p class="p-para" style="color:red">Note: In Java Char take 2 byte because the char datatype
+                                is
+                                designed to represent Unicode characters. Compare to other languages like C/C++ use only
+                                ASCII characters, and to represent all ASCII characters in 8 bits is enough. But Java
+                                uses
+                                the Unicode system 8 bits is not enough to represent all characters so Java uses 2 bytes
+                                for
+                                characters</p>
+                        </ol>
+                    </li>
+                    <table class="table table-bordered table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Type</th>
+                                <th>Default value</th>
+                                <th>Size</th>
+                                <th>Range</th>
+                            </tr>
+                        </thead>
+
+                        <tr>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>1bit (depend upon system)</td>
+                            <td>true,false</td>
+                        </tr>
+                        <tr>
+                            <td>byte</td>
+                            <td>0</td>
+                            <td>8-bit</td>
+                            <td>-128 to 127</td>
+                        </tr>
+                        <tr>
+                            <td>char</td>
+                            <td>\u0000</td>
+                            <td>16-bit</td>
+                            <td>0 to 255</td>
+                        </tr>
+                        <tr>
+                            <td>short</td>
+                            <td>0</td>
+                            <td>16-bit</td>
+                            <td>-32768 to 32767</td>
+                        </tr>
+                        <tr>
+                            <td>int</td>
+                            <td>0</td>
+                            <td>32-bit</td>
+                            <td>-2,147,483,648 to 2,147,483,647</td>
+                        </tr>
+                        <tr>
+                            <td>long</td>
+                            <td>0</td>
+                            <td>64-bit</td>
+                            <td>-9,223,372,036,854,775,808 to 9,223,036,854,775,807</td>
+                        </tr>
+                        <tr>
+                            <td>float</td>
+                            <td>0.0f</td>
+                            <td>32-bit</td>
+                            <td> ±3.4E38 with up to 7 significant digits</td>
+                        </tr>
+                        <tr>
+                            <td>double</td>
+                            <td>0.0d</td>
+                            <td>64-bit</td>
+                            <td>±1.7E308 with up to 15 significant digits</td>
+                        </tr>
+                    </table>
+                    <li><span>Non-Primitive DataType: </span>In Non-primitive datatype has special capability to store
+                        multiple value into a single variable that are called Non-primitive DataType.
+                        <ol>
+                            <li><span>String: </span> The String datatype is used to represent a sequence of characters.
+                                It's not a primitive datatype like int or char, but rather a class defined in the
+                                'java.lang' package. Strings in Java are immutable, meaning their values cannot be
+                                changed
+                                once they are created. </li>
+                            <li><span>Class: </span> User-defined types, they are blueprints for creating objects, and
+                                objects are instances of classes.</li>
+                            <li><span>Array: </span>Array is a collection of similar datatype stored into one variable.
+                            </li>
+                            <p class="p-para">We dicuss string, array , interface and class in study in detail next
+                                caming
+                                topics.</p>
+                        </ol>
+                    </li>
+                    <div class="container">
+                        <pre class="contain">
+                                <code class="java-program">
+         public class Main {
+            public static void main(String[] args) {
+                // Primitive datatypes
+                        int num1 = 10;
+                        double num2 = 3.14d;
+                        char letter = 'A';
+                        boolean isTrue = true;
+                        
+                        // Reference datatypes
+                        String name = "John";
+                        int[] numbers = {1, 2, 3, 4, 5};
+                    }
+                }
+                </code>
+            </pre>
+                    </div>
+                </ol>
+            </div>
+            <div>
+                <h5 class="h2-head" id="d">Declaration of Variable</h5>
+                <p class="p-para">In Java, variables are the names of storage locations. After designing suitable
+                    variable
+                    names, we must declare them to the compiler.</p>
+                <ul>
+                    <li>It tells the compiler what the variable name is.</li>
+                    <li>It specifies what type of data the variable name is.</li>
+                    <li>The place of declaration decides the scope of the variable.</li>
+                    <p class="p-para">A variable must be declared before it is used in the program.</p>
+                    <code>datatype varName;</code>
+                    <p class="p-para">For ex: int count;</p>
+                    <p class="p-para">A simple method to giving the value or assign value to a varible. The Process of
+                        giving initial value to variable is known as initialization. <br />
+                        <code>int count = 0;</code>
+                    </p>
+                </ul>
+            </div>
+            <div>
+                <h5 class="h2-head" id="e">Scope of Variables</h5>
+                <p class="p-para">
+                    In Java, the scope of a variable defines where in the program the variable can be accessed or
+                    referenced. The scope of a variable is determined by where it is declared within the code. <br />
+                    There
+                    are Three types of varible are shown below:
+                <ul>
+                    <li>Local Variable</li>
+                    <li>Instance Variable</li>
+                    <li>Static Variable</li>
+                </ul>
+                </p>
+                <h6 class="h2-head">Local Variable</h6>
+                <ul>
+                    <li>Local variables are declared within a method, constructor, or block.</li>
+                    <li>They exist only within the block in which they are declared and are accessible only from that
+                        block.
+                    </li>
+                    <li>They are not accessible from outside the block, including nested blocks within the same method.
+                    </li>
+                </ul>
+                <h6 class="h2-head">Instance Variable</h6>
+                <ul>
+                    <li>Instance variables are declared within a class but outside any method, constructor, or block.
+                    </li>
+                    <li>These variables are created when an object of the class is created and destroyed when the object
+                        is
+                        destroyed.</li>
+                    <li>They are associated with objects (instances) of the class, hence the name "instance variables."
+                    </li>
+                </ul>
+                <h6 class="h2-head">Static Variable</h6>
+                <ul>
+                    <li>It is similar to Instance variable but Static variables are declared using the static keyword
+                        within
+                        a class but outside any method, constructor, or block.</li>
+                    <li>They are shared among all instances of the class.</li>
+                    <li>They are associated with the class itself rather than with any specific instance of the class.
+                    </li>
+                </ul>
+                <p class="p-para">Program to demostrate the Local, Instance and static variable </p>
+                <div class="container">
+                    <pre class="contain">
+                            <code class="java-program">
+        public class Main {
+            static int y = 56;
+            public String name; // instance variable
+        
+            public Main() {
+                this.name = "Rohit Varshney";
+            }
+        
+            public static void main(String[] args) {
+        
+                // initializing Instance Variable
+                Main obj = new Main();
+                System.out.println("Instance variable name  = " + obj.name);
+        
+                // Declare a Local variable
+                int x = 5;
+                System.out.println("local variable x = " + x);
+        
+                if (x != 0) {
+                    x = 7;
+                    System.out.println("local variable x = " + x);
+                }
+                // no requirement to initializing a static Variable
+                System.out.println("Static variable y  = " + y);
+            }
+        }
+            </code>
+        </pre>
+                </div>
+
+                <pre class="output"><span>Output:</span> 
+                        Instance variable name  = Rohit Varshney
+                        local variable x = 5
+                        local variable x = 7
+                        Static variable y  = 56
+                    </pre>
+            </div>
+
+            <div>
+                <h5 class="h2-head" id="f">Type Casting</h5>
+                <p class="p-para">In Java, TypeCasting is a process that convert one datatype to another using cast
+                    operator. We must cast the value to be stored by preceding it with the type name in parentheses.
+                </p>
+                <code>Syntax : type var1 = (type) value;</code>
+                <h6 class="h2-head">Type of TypeCasting</h6>
+                <ol>
+                    <li><span>Widening TypeCasting: </span>Widening TypeCasting also called Implicit TypeCasting. In
+                        this type a lower datatype is transformed into higher datatype without cast
+                        operators(automatically). <br /> Syntax:
+                        <code> < large_data_type > varname = < value_of_Small_datatype>.</code></li>
+                    <code>byte -> short -> char -> int -> long -> float -> double</code>
+                    <div class="container">
+                        <pre class="contain">
+                                <code class="java-program">
+        public class Main {
+            public static void main(String[] args) {
+                int var_int=5;
+                double var_double = var_int; //(automatic type conversion int to double)
+                System.out.println(var_int);
+                System.out.println(var_double);
+            }
+        }
+                </code>
+            </pre>
+                    </div>
+                    <pre class="output"><span>Output:</span>
+                            5
+                            5.0
+                        </pre>
+                    <li><span>Narrow TypeCasting: </span>Narrowing TypeCasting also called Explicit TypeCasting. In this
+                        type a higher datatype is transformed into lower datatype by using cast operators (manually).
+                        <br /> Syntax:
+                        <code> < smaller_data_type > varname = (< Small_data_type>) larger_data_type_varname.</code>
+                    </li>
+                    <code>double -> float -> long -> int -> char -> short -> byte</code>
+                    <div class="container">
+                        <pre class="contain">
+                                <code class="java-program">
+        public class Main {
+            public static void main(String[] args) {
+                double a = 5.23654;
+                int b = (int)a; // manually(Explicit typecasting)
+                System.out.println(a);
+                System.out.println(b);
+            }
+        }
+                </code>
+            </pre>
+                    </div>
+                    <pre class="output"><span>Output:</span>
+                            5.23654
+                            5                    
+                        </pre>
+                </ol>
+            </div>
+            <div class="btnn">
+                <div class="btn1">
+                    <a href="java_c.html">Previous</a>
+                </div>
+                <div class="btn1">
+                    <a href="java_e.html">Next</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <div id="footer_file"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        $("#header_file").load("../heads.html");
+        $("#footer_file").load("../footer.html");
+    </script>
+</body>
+
+</html>

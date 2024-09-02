@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings in java</title>
+    <link rel="stylesheet" href="../style/style_a.css">
+    <link rel="stylesheet" href="./java_style.css">
+    <link rel="stylesheet" href="../style/card.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,1,0" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <div id="header_file"></div>
+
+    <!-- Main contain -->
+    <main>
+        <div class="px-5 py-5">
+            <div class="container" id="start">
+                <h2 class="h2-head">Strings in Java</h2>
+            </div>
+            <div class="container">
+                <table>
+                    <th colspan="2">Table Of Content</th>
+                    <tr>
+                        <td>
+                            <ul class="ul-list">
+                                <li><a href="#a">What is String?</a></li>
+                                <li><a href="#b">Declare String In Java</a></li>
+                                <li><a href="#c">Immutable String</a></li>
+                                <li><a href="#d">String in Memory</a></li>
+                                <li><a href="#e">String Method</a></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="ul-list">
+                                <li><a href="#f">Char Sequence Interface</a></li>
+                                <li><a href="#g">StringBuffer</a></li>
+                                <li><a href="#h">StringBuilder</a></li>
+                                <li><a href="#i">Difference Between StringBuilder & StringBuffer</a></li>
+                                <li><a href="#j">String Tokenizer </a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+                <div>
+                    <h5 class="h2-head" id="a">String in Java</h5>
+                    <p class="p-para">
+                        Generally, String is a sequence of character but In java, String is an object that represent squence of
+                        charater. String is immutable in java that mean Strings are constant; their values cannot be changed
+                        after they are created. String to be initialize into double quote.
+                        <br />
+                    <pre>
+        For Example : String str = "courseTpoint";
+        is equivalent to:
+        char arr[] = {'c','o','u','r','s','e','T','p','o','i','n','t'};
+        String str = new String(arr);
+                    </pre>
+                    </p>
+        
+                    <h5 class="h2-head" id="b">Creating String in Java</h5>
+                    <p class="p-para">If we are creating string in java some points to be remember.</p>
+                    <ul>
+                        <li>Strings are immutable in java.</li>
+                        <li>import <strong>java.lang.String</strong> package before initialize string sometimes it show an
+                            error.</li>
+                        <li>java string is more reliable compare to c string.</li>
+                        <li>Java string are creating into two ways :
+                            <ol type="i">
+                                <li>Using String Literal</li>
+                                <li>Using new Keyword</li>
+                            </ol>
+                        </li>
+                    </ul>
+                    <h6 class="h2-head">String Literal</h6>
+                    <p class="p-para">String Literal make java memory more effecient because no new object is create when it is
+                        already exist in the constant memory pool. Java String literal is created by using double quotes.</p>
+                    <strong>Syntax
+                        <code>
+                            <pre class="syntax">
+                                String < StringName > = "< SequenceOfString > "
+                            </pre>
+                        </code>
+                    </strong>
+                    <p class="p-para">Let consider an example to better understand about string suppose only one object will be
+                        created. Firstly JVM will not search any string object with the value “car” in the string constant pool,
+                        if it not exist in string constant pool it will create a new object. After that it will search the
+                        string with the value “car” in the pool, it will not create a new object but will return the reference
+                        to the same instance that make memory more Efficient.</p>
+                    <code>String Object = "Car";</code>
+                    <p class="p-para">We will create String with name Object it doesn't exist in constant pool, create new
+                        object and placed in a pool.</p>
+                    <code>
+                        String Object1 = "Car"; <br/>
+                        String Object2 = "Car"; //It doesn't create a new object of the string instance
+                    </code>
+                    <img src="./java-img/string.jpg" alt="" class="img-fluid">
+                    <h6 class="h2-head">Using New Keyword</h6>
+                    <p class="p-para">
+                        If you can declare a string using the 'new' keyword to create a new instance of the String class. In
+                        this case JVM will create a new string object in normal(non-pool) heap memory and the literal "Car" will
+                        be placed in the string constant pool. The variable str will refer to the object in a heap (non-pool).
+                    </p>
+                    <strong>For Example
+                        <code>
+                            <pre class="syntax">
+                                String str = new String("courseTpoint");
+                            </pre>
+                        </code>
+                    </strong>
+                    <div class="container">
+                        <pre class="contain">
+                            <code class="java-program">
+        import java.lang.String;                       
+        class Main{
+            public static void main(String [] args){
+               String str1 = "Rohit";  // string Literal 
+               String str2 = new String("courseTpoint"); // using new keyword
+               System.out.println(str1);
+               System.out.println(str2);
+              }
+           }
+                            </code>
+                        </pre>
+                    </div>
+                    <pre class="output"><span>Output:</span>
+            Rohit
+            courseTpoint
+        </pre>
+        
+                    <div>
+                        <h5 class="h2-head" id="c">Immutable String</h5>
+                        <p class="p-para">We known about java string is immutable. When create string object their values cannot
+                            be changed. But why java strings are immutable?</p>
+        
+                        <ol>
+                            <li><span>Security : </span>Since string are often used to store sensitive data like usernames and
+                                passwords, immutability helps prevent values from changed hatefully.</li>
+                            <li><span>String pool: </span>It store string literal. Because string are immutable, the JVM can
+                                optimize memory allocation by storing only one copy of each literal string, which can be shared
+                                across different string variables.</li>
+                            <li><span>Performance : </span>Immutable string can be cached and reuse without the need for
+                                creating new objects, that help to increase performance.</li>
+                            <li><span>Synchronization : </span>Since strings cannot change state, they are naturally thread safe
+                                which simplifies the development of concurrent application.</li>
+                        </ol>
+                        <div class="container">
+                            <pre class="contain">
+                    <code class="java-program">
+        /*Program to demonstrate java is immutable.*/
+        class Immutable{
+            public static void main(String [] args){
+              String fname = "Aditya";
+              fname.concat(" Pratap"); // concatination help to join two string .
+              System.out.println(fname); // print Rohit due to string is immutable
+             }
+            }
+                    </code>
+                </pre>
+                        </div>
+                        <pre class="output"><span>Output : </span> Aditya</pre>
+                        <p class="p-para">In the above program we can see object fname point to <code>Aditya</code> instead
+                            <code>Aditya Pratap</code>.
+                        </p>
+                        <p class="p-para">But, if we assign to reference variable it refers to <code>Aditya Pratap</code>.
+                            please note original string "Rohit" remain unchanged in the string pool.</p>
+                        <div class="container">
+                            <pre class="contain">
+                    <code class="java-program">
+        class Immutable{
+            public static void main(String [] args){
+              String fname = "Aditya";
+              fname = fname.concat(" Pratap"); // assign to reference variable
+              System.out.println(fname);
+             }
+            }
+                    </code>
+                </pre>
+                        </div>
+                        <pre class="output"><span>Output : </span> Aditya Pratap</pre>
+                    </div>
+        
+                    <div>
+                        <h5 class="h2-head" id="d">String in Memory</h5>
+                        <p class="p-para">
+                            Whenever a String Object is created as a literal, the object will be created in the String constant
+                            pool. This allows JVM to optimize the initialization of String literal.
+                            <br />
+                            <code class="syntax"> String demoStr = "courseTpoint"; </code>
+                        </p>
+                        <p class="p-para">
+                            The string can also be declared using a new operator i.e. dynamically allocated. In case of String
+                            are dynamically allocated they are assigned a new memory location in the heap. This string will not
+                            be added to the String constant pool.
+                            <code class="syntax">String demoStr = new String("courseTpoint");</code>
+                        </p>
+                        <div class="container">
+                            <pre class="contain">
+                                <code class="java-program">
+        import java.lang.*;
+        
+        class StringMemory{
+         public static void main(String [] args){
+            String demoStr1 = "courseTpoint";  // declare using string literal
+            String demoStr2 = "courseTpoint"; // declare using string literal
+            String demoStr3 = new String("courseTpoint"); // declare using new Keyword
+            System.out.println(demoStr1);
+            System.out.println(demoStr2);
+            System.out.println(demoStr3);
+          }
+        }
+                                </code>
+                            </pre>
+                        </div>
+                        <pre class="output"><span>Output:</span>
+        courseTpoint
+        courseTpoint
+        courseTpoint
+        </pre>
+                        <p class="p-para">In the above program String Object is created in Heap area and Literals are stored in
+                            special memory area known as string constant pool. As shown figure :</p>
+                        <img src="./java-img/memory.jpg" alt="" class="img-fluid">
+        
+                    </div>
+                    <div>
+                        <h5 class="h2-head" id="e">String Method</h5>
+                        <p class="p-para">String method operate on java string. They can be used to find length of the string,
+                            appent to string, lowercase etc.
+                            <br />
+                            Some commonly used strimg methods.
+                        </p>
+                        <ul>
+                            <li><span>String length() :</span> They should find total number of characters present in the string
+                                including white spaces. <br />
+                                <code class="syntax">strName.length();</code>
+                            </li>
+                            <li><span>String toLowerCase() : </span>Return new string which has all the lowercase characters
+                                from the string name. <br />
+                                <code class="syntax">strName.toLowerCase();</code>
+                            </li>
+                            <li><span>String toUpperCase() : </span>Return new string which has all the UPPERCASE characters
+                                from the string name. <br />
+                                <code class="syntax">strName.toUpperCase();</code>
+                            </li>
+                            <li><span>String trim() : </span>Return a new String after removing all the leading and trailing
+                                space from the original string. <br />
+                                <code class="syntax">strName.trim();</code>
+                            </li>
+                            <li><span>String substring(int startIndex) : </span>Return a substring from when you start upto end
+                                substring. <br />
+                                <code class="syntax">strName.substring(int start);</code>
+                            </li>
+                            <li><span>String substring(int start , int end) : </span>Return a substring from when you start and
+                                when you end substring. <br />
+                                <code class="syntax">strName.substring(int start , int end);</code>
+                            </li>
+                            <li><span>String startsWith(String prefix) : </span>Return true if String start with given prefix
+                                otherwise false. <br /> <strong>Note :It is case sensitive</strong> </br>
+                                <code class="syntax">strNmae.startsWith(string prefix);</code>
+                            </li>
+                            <li><span>String endsWith(string suffix) : </span>Return true if string ends with given suffix
+                                otherwise false. <br />
+                                <code class="syntax">strName.endsWith(sting suffix);</code>
+                            </li>
+                            <li><span>String charAt(int index) : </span>Returns a char value at the given index number. <br />
+                                <code class="syntax">strName.charAt(int index);</code>
+                            </li>
+                            <li><span> String concat() : </span> Return a combines specified string at the end of other string.
+                                <br />
+                                <code class="syntax">strName.concat(otherString);</code>
+                            </li>
+                            <li><span>String compareTo() : </span>Return positive, negative, and zero compare given string with
+                                the current string. <br />
+                                <code class="syntax">strName.compareTo(OtherString)</code>
+                            </li>
+                        </ul>
+                        <div class="container">
+                            <pre class="contain">
+                    <code class="java-program">
+        /*Program to demonstrate working of string methods*/
+        import java.lang.String;
+        
+        class DemoString{
+         public static void main(String [] args){
+          //String declare
+           String str = "course T point";
+           String str1 = "            Jai   Hind                            ";
+           String str2 = "Hello";
+           String str3 ="Java";
+           //find length of string using length() method
+           System.out.println("Length of String str : " + str.length());
+           //convert to lowercase
+           System.out.println("String str in lowercase : " + str.toLowerCase());
+           //convert to UPPERCASE
+           System.out.println("String str in Uppercase : " + str.toUpperCase());
+           // String trim
+            System.out.println("string str1 is trim : " + str1.trim());
+           // String substring at start
+           System.out.println("substring from start str : " + str.substring(3));
+           //String substring start as well as end
+           System.out.println("substring from start to end str : " + str.substring(3,10));
+           // String startswith
+           System.out.println("Is string str2 start with 'Se' : " + str2.startsWith("Se"));
+           // String endsWith
+           System.out.println("Is string str3 ends with 'Ava' : " + str3.endsWith("Ava"));
+            System.out.println("Is string str3 ends with 'ava' : " + str3.endsWith("ava"));
+           // String charAt
+           System.out.println("Character in the given index : " + str3.charAt(2));
+          // String concat 
+          System.out.println("combine str2 with str3 : " + str2.concat(str3));
+          //String compareTo 
+          System.out.println("Compare str2 with str3 : " + str2.compareTo(str3)); //-2 because h is 2time smaller than j
+         }
+        } 
+                    </code>
+                </pre>
+                        </div>
+                        <pre class="output"><span>Output: </span>
+        Length of String str : 14
+        String str in lowercase : course t point
+        String str in Uppercase : COURSE T POINT
+        string str1 is trim : Jai   Hind
+        substring from start str : rse T point
+        substring from start to end str : rse T p
+        Is string str2 start with 'Se' : false
+        Is string str3 ends with 'Ava' : false
+        Is string str3 ends with 'ava' : true
+        Character in the given index : v
+        combine str2 with str3 : HelloJava
+        Compare str2 with str3 : -2
+         </pre>
+        
+                    </div>
+                    <div>
+                        <h5 class="h2-head" id="f">CharSequence Interface</h5>
+                        <p class="p-para">The CharSequence interface is used to represent sequence of characters. String ,
+                            StringBuffer and StringBuilder classes is implemented means in java we can create string in three
+                            ways.</p>
+                        <ul>
+                            <li>String</li>
+                            <li>StringBuffer</li>
+                            <li>StringBuilder</li>
+                        </ul>
+                        <p class="p-para">String in Java is immutable on other hand StringBuffer and StringBuilder are mutable.
+                            That's mean string is not changed. whenever we change any string, a new instance is created. </p>
+                        <h5 class="h2-head" id="g">StringBuffer</h5>
+                        <p class="p-para">StringBuffer is mutable in Nature and it is tread safe. StringBuffer creates strings
+                            of flexible length that can be modified in term of both length and content. we can insert characters
+                            and substrings in middle of a string, or append string at end.</p>
+                        <code class="syntax">StringBuffer demoStr = new StringBuffer("courseTpoint")</code>
+                        <div class="container">
+                            <pre class="contain">
+                    <code class="java-program">
+        import java.lang.StringBuffer;
+        
+        class StringManipulation{
+          public static void main(String [] args){
+            StringBuffer str = new StringBuffer("course");
+            str.append("T");
+            str.append("point");
+            System.out.println(str);
+            }
+         }   
+                    </code>
+                </pre>
+                        </div>
+                        <pre class="output"><span>Output : </span>courseTpoint</pre>
+        
+                        <h6 class="h2-head">Constructor of StringBuffer class</h6>
+                        <ul>
+                            <li><span>StringBuffer() : </span> create an empty buffer with initial capacity of 16.</li>
+                            <li><span>StringBuffer(String str) : </span> Creates a string buffer with the specified string.</li>
+                            <li><span>StringBuffer(int capacity) : </span>creates an empty string buffer with the specified
+                                capacity as length.</li>
+                                <li><span>StringBuffer(CharSequence chars) : </span> create an object that contains the character sequence contained in chars.</li>
+                        </ul>
+                        <h6 class="h2-head">Methods for Java StringBuffer Class</h6>
+                        <table class="table table-bordered table-hover">
+                            <tr class="thead-dark">
+                                <th>Methods</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>length()</td>
+                                <td> The current length of stringBuffer found by length() method.</td>
+                            </tr>
+                            <tr>
+                                <td>capacity()</td>
+                                <td>The Total allocated capacity found by the capacity() method.</td>
+                            </tr>
+                            <tr>
+                                <td>append()</td>
+                                <td>Add text at the end of existing string.</td>
+                            </tr>
+                            <tr>
+                                <td>setLength()</td>
+                                <td>set the length of string with a stringbuffer object by setLength() method.</td>
+                            </tr>
+                            <tr>
+                                <td>ensureCapacity()</td>
+                                <td>Set the least possible size of the buffer by the ensureCapacity() method.</td>
+                            </tr>
+                            <tr>
+                                <td>insert()</td>
+                                <td>Insert the string at specified indexed position by insert() method.</td>
+                            </tr>
+                            <tr>
+                                <td>reverse()</td>
+                                <td>reverse te character within a StringBuffer object using reverse() method.</td>
+                            </tr>
+                            <tr>
+                                <td>delete()</td>
+                                <td>delete a sequence of character within a StringBuffer by using delete() method.</td>
+                            </tr>
+                            <tr>
+                                <td>deleteCharAt()</td>
+                                <td>delete the character at the index specified by loc.</td>
+                            </tr>
+                            <tr>
+                                <td>replace()</td>
+                                <td>replace one set of charcater with another set inside a StringBuffer object by calling.</td>
+                            </tr>
+                        </table>
+                        <h5 class="h2-head" id="h">StringBuilder</h5>
+                        <p class="p-para">StringBuilder introduced in JDK5 version of Java, StringBuilder is a recent addition to java's string handling capabilities. StringBuilder is very much similar to StringBuffer but one important difference :  it is not thread-safe. and it is faster performance compare to StringBuffer. However, in case in which you using multithreading, you must use StringBuffer rather than StringBuilder.</p>
+                        <code class="syntax">StringBuilder demoStr = new StringBuilder("courseTpoint");</code>
+                        <div class="container">
+                            <pre class="contain">
+                                <code class="java-program">
+        import java.lang.StringBuilder;
+        
+        class StringManipulation{
+          public static void main(String [] args){
+            StringBuilder str = new StringBuilder("course");
+            str.append("T");
+            str.append("point");
+            System.out.println(str);
+            }
+         }  
+                                </code>
+                            </pre>
+                        </div>
+                        <pre class="output"><span>Output : </span>courseTpoint</pre>
+                        <h6 class="h2-head">Constructor of StringBuilder class</h6>
+                        <ul>
+                            <li><span>StringBuilder() : </span>Constructs a StringBuilder with no characters in it and an initial capacity of 16 characters.</li>
+                            <li><span>StringBuilder(int capacity) : </span> An initial capacity specified by the  capacity argument.</li>
+                            <li><span>StringBuilder(CharSequence chars) : </span>Constructor a StringBuilder that contain the same characters as the specified CharSequence.</li>
+                            <li><span>StringBuilder (String str) : </span> Constructors a StringBuilder initialize to the contents of the specified string. </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="h2-head" id="i">Difference between StringBuilder and StringBuffer</h5>
+                        <table class="table table-hover table-bordered">
+                            <tr class="thead-dark">
+                                <th>Aspect</th>
+                                <th>StringBuffer</th>
+                                <th>StringBuilder</th>
+                            </tr>
+                            <tr>
+                                <td>Introduced</td>
+                                <td>StringBuffer is  Introduced by JDK 1.</td>
+                                <td>StringBuilder is Introduced by JDK 5.</td>
+                            </tr>
+                            <tr>
+                                <td>Thread safe</td>
+                                <td>StringBuffer is thread-safe(Synchronized) multiple threads can safely use the same instance.</td>
+                                <td>StringBuilder is not thread-safe(Asynchronized). Intended for single-threaded scenarios.</td>
+                            </tr>
+                            <tr>
+                                <td>Peformance</td>
+                                <td>StringBuffer is slower Performance compare to StringBuilder.</td>
+                                <td>StringBuilder is faster Performance compare to StringBuffer.</td>
+                            </tr>
+                            <tr>
+                                <td>Efficient</td>
+                                <td>StringBuffer is less Efficient than StringBuilder.</td>
+                                <td>StringBuilder is more Efficient than StringBuffer.</td>
+                            </tr>
+                            <tr>
+                                <td>Syntax</td>
+                                <td>StringBuffer str = new StringBuffer()</td>
+                                <td>StringBuilder str = new StringBuilder()</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <h5 class="h2-head" id="j">String Tokenizer</h5>
+                        <p class="p-para"><strong>StringTokenizer</strong> class are used to broke down String into tokens based on specified delimiter character. It is simple approach to break a string. <br/>
+                        It does not provide the facility to differentiate between numbers, quoted strings or identifiers like StreamTokenizer class does. 
+                        </p>
+                        <img src="./java-img/tokenizer.jpg" alt="" class="img-fluid">
+                        <h6 class="h2-head">Constructors of the StringTokenizer class</h6>
+                        <table class="table table-bordered table-hover">
+                            <tr class="thead-dark">
+                                <th>Constructor</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>StringTokenizer(String str)</td>
+                                <td>Constructs a string tokenizer for the specified string.</td>
+                            </tr>
+                            <tr>
+                                <td>StringTokenizer(String str, String delim)</td>
+                                <td>It creates StringTokenizer with specified string and delimiter.</td>
+                            </tr>
+                            <tr>
+                                <td>StringTokenizer(String str, String delim, boolean returnValue)</td>
+                                <td>It creates StringTokenizer with specified string, delimiter, and returnValue.</td>
+                            </tr>
+                        </table>
+                        <h6 class="h2-head">Methods of StringTokenizer class</h6>
+                        <table class="table table-bordered table-hover">
+                            <tr class="thead-dark">
+                                <th>Type and Method</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>int countTokens()</td>
+                                <td>calculate the total number of tokens.</td>
+                            </tr>
+                            <tr>
+                                <td>boolean hasMoreTokens()</td>
+                                <td>Tests if there are more tokens available from this tokenizer's string.</td>
+                            </tr>
+                            <tr>
+                                <td>boolean hasMoreElements()</td>
+                                <td>Return the same value as the hasMoretokens Method.</td>
+                            </tr>
+                            <tr>
+                                <td>object nextElement()</td>
+                                <td>Return the same value as the nextToken method, except that its declared return value is object rather than String.</td>
+                            </tr>
+                            <tr>
+                                <td>String nextToken()</td>
+                                <td>Return the next token from this String tokenizer.</td>
+                            </tr>
+                            <tr>
+                                <td>String nextToken(String delim)</td>
+                                <td>Return the next token in this string tokenizer's string.</td>
+                            </tr>
+                        </table>
+        
+                    </div>
+                    <div class="btnn">
+                        <div class="btn1">
+                            <a href="java_f.html">Previous</a>
+                        </div>
+                        <div class="btn1">
+                            <a href="java_h.html">Next</a>
+                        </div>
+                    </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <div id="footer_file"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        $("#header_file").load("../heads.html");
+        $("#footer_file").load("../footer.html");
+    </script>
+</body>
+
+</html>
